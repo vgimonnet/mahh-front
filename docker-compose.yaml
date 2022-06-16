@@ -12,4 +12,4 @@ services:
     working_dir: /home/node/app
     expose:
       - '3000'
-    command: npm start
+    command: npm run dev
