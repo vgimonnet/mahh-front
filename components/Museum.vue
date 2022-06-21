@@ -38,6 +38,7 @@ export default {
   name: 'MuseumComponent',
   mounted () {
     const slider = document.querySelector('.museum')
+    slider.style.width = slider.offsetHeight * slider.children.length + 'px'
     let isDown = false
     let startX
     let scrollLeft
