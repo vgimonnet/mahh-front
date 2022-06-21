@@ -15,6 +15,15 @@
       </div>
       <div class="museum__slide --four">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-4.png" alt="">
+        <a href="#" id="decouvrir">
+          <div>
+            <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.97998 1.29272H11.4545V11.7673" stroke="#191919"/>
+              <line x1="0.782189" y1="11.9907" x2="11.1012" y2="1.67172" stroke="#191919"/>
+            </svg>
+            <img loading="lazy" class="museum__decouvrir" src="@/assets/decouvrir.svg" alt="Découvrir le jeu">
+          </div>
+        </a>
       </div>
       <div class="museum__slide --five">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-5.png" alt="">
@@ -41,12 +50,12 @@ export default {
   mounted () {
     const slider = document.querySelector('.museum')
 
-    let totalWidth = 0
-    Array.from(slider.children).forEach((item) => {
-      totalWidth += item.offsetWidth
-    })
+    // let totalWidth = 0
+    // Array.from(slider.children).forEach((item) => {
+    //   totalWidth += item.offsetWidth
+    // })
 
-    slider.style.width = totalWidth + 'px'
+    // slider.style.width = totalWidth + 'px'
     let isDown = false
     let startX
     let scrollLeft

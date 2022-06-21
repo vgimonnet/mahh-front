@@ -28,6 +28,54 @@
   &__slide {
     height: 100vh;
     position: relative;
+
+    &.--four {
+      a#decouvrir {
+        position: absolute;
+        top: 33%;
+        left: 35%;
+        div {
+          position: relative;
+          img {
+            width: 7.5rem;
+            height: 7.5rem;
+            position: absolute;          
+            -webkit-animation: infiniteRotate 10s linear infinite; /* Safari */
+            animation: infiniteRotate 10s linear infinite;
+            padding: 2px 3px 2px 1px;
+            transition: background-color 0.5s ease-in-out;
+            border-radius: 50%;
+          }
+          svg {
+            width: 14px;
+            height: 11px;
+            position: absolute;
+            top: 17px;
+            left: 18px;
+            padding: 16px 15px;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+            box-shadow: -1px 2px 2px 0 rgba(0, 0, 0, 0.12);
+            transition: background-color 0.5s ease-in-out;
+          }
+        }
+        &:hover {
+          div {
+            svg {
+              padding: 34px 32px;
+              top: -2px;
+              left: -1px;
+              background-color: transparent;
+              z-index: 99999;
+              box-shadow: none;
+            }
+            img {
+              background-color: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
   }
 
   &__pic {
@@ -38,4 +86,14 @@
 
 ::-webkit-scrollbar {
   display:none;
+}
+
+@-webkit-keyframes infiniteRotate {    
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+/* Standard syntax */
+@keyframes infinite-rotate {  
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
 }
