@@ -1,6 +1,14 @@
 .museum {
 
-  &__bg {
+  display: flex;
+
+  &__slide {
     height: 100vh;
+    position: relative;
+  }
+
+  &__pic {
+    display: block;
+    height: 100%;
   }
 }

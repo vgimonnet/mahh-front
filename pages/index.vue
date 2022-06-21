@@ -1,7 +1,6 @@
 <template>
   <main>
-    <Intro v-if="!entered" />
-    <Museum v-else />
+    <Museum />
   </main>
 </template>
 
