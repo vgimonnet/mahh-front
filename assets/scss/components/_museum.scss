@@ -1,6 +1,29 @@
-.museum {
 
+.outer-wrapper {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.museum {
   display: flex;
+  flex-direction: row;
+  width: 400vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+  overflow: hidden;
+  cursor: pointer;
+  overflow-x: scroll;
+
+  &.active {    
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+  }
 
   &__slide {
     height: 100vh;
@@ -11,4 +34,8 @@
     display: block;
     height: 100%;
   }
+}
+
+::-webkit-scrollbar {
+  display:none;
 }
