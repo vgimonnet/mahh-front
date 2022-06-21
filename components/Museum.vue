@@ -1,32 +1,34 @@
 <template>
   <section class="outer-wrapper">
     <div class="museum">
-      <div class="museum__slide">
+      <div class="museum__slide --one">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-1.png" alt="">
-        <!-- <button class="museum__btn">test</button> -->
+        <div class="museum__content">
+
+        </div>
       </div>
-      <div class="museum__slide">
+      <div class="museum__slide --two">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-2.png" alt="">
       </div>
-      <div class="museum__slide">
+      <div class="museum__slide --three">
         <img class="museum__pic" src="@/assets/slide-3.png" alt="">
       </div>
-      <div class="museum__slide">
+      <div class="museum__slide --four">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-4.png" alt="">
       </div>
-      <div class="museum__slide">
+      <div class="museum__slide --five">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-5.png" alt="">
       </div>
-      <div class="museum__slide">
+      <div class="museum__slide --six">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-6.png" alt="">
       </div>
-      <div class="museum__slide">
+      <div class="museum__slide --seven">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-7.png" alt="">
       </div>
-      <div class="museum__slide">
+      <div class="museum__slide --height">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-8.png" alt="">
       </div>
-      <div class="museum__slide">
+      <div class="museum__slide --nine">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-9.png" alt="">
       </div>
     </div>
