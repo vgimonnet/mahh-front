@@ -13,7 +13,7 @@
 .museum {
   display: flex;
   flex-direction: row;
-  width: 400vw;
+  width: fit-content;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
   overflow: hidden;
