@@ -682,4 +682,14 @@ button:active, button:focus {
   left: 36%;
 }
 
+main#loader {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background-color: #EDE9E3;
+}
+main#loader img {
+  margin: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
