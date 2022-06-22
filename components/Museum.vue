@@ -31,7 +31,7 @@
           >
         </div>
       </div>
-      <div class="museum__slide --three">
+      <div id="three" class="museum__slide --three">
         <img class="museum__pic" src="@/assets/slide-3.png" alt="">
 
         <span class="anchor --first zoom-in"></span>
@@ -70,7 +70,7 @@
           </svg>
         </button>
       </div>
-      <div class="museum__slide --four">
+      <div id="four" class="museum__slide --four">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-4.png" alt="">
         <a href="#" id="decouvrir">
           <div>
@@ -82,7 +82,7 @@
           </div>
         </a>
       </div>
-      <div class="museum__slide --five">
+      <div id="five" class="museum__slide --five">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-5.png" alt="">
 
         <span class="anchor --second zoom-in"></span>
@@ -125,7 +125,7 @@
           <button class="movie-btn btn-line">Visionnez le film</button>
         </div>
       </div>
-      <div class="museum__slide --six">
+      <div id="six" class="museum__slide --six">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-6.png" alt="">
 
         <span class="anchor --third zoom-in"></span>
@@ -200,7 +200,7 @@
           </svg>
         </button>
       </div>
-      <div class="museum__slide --seven">
+      <div id="seven" class="museum__slide --seven">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-7.png" alt="">
 
         <span class="anchor --fifth zoom-in"></span>
@@ -239,7 +239,7 @@
           </svg>
         </button>
       </div>
-      <div class="museum__slide --height">
+      <div id="height" class="museum__slide --height">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-8.png" alt="">
 
         <span class="anchor --sixth zoom-in"></span>
@@ -314,7 +314,7 @@
           </svg>
         </button>
       </div>
-      <div class="museum__slide --nine">
+      <div id="nine" class="museum__slide --nine">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-9.png" alt="">
       </div>
     </div>
@@ -377,12 +377,25 @@ export default {
       }
     },
     scrollToEnd () {
-      /* setInterval(() => {
-        document.querySelector('.outer-wrapper').scrollBy({
-          behavior: 'smooth',
-          top: 10
-        })
-      }, 150) */
+      document.querySelector('#two').scrollIntoView()
+      setTimeout(() => {
+        document.querySelector('#three').scrollIntoView()
+      }, 2000)
+      setTimeout(() => {
+        document.querySelector('#four').scrollIntoView()
+      }, 4000)
+      setTimeout(() => {
+        document.querySelector('#five').scrollIntoView()
+      }, 6000)
+      setTimeout(() => {
+        document.querySelector('#six').scrollIntoView()
+      }, 8000)
+      setTimeout(() => {
+        document.querySelector('#seven').scrollIntoView()
+      }, 10000)
+      setTimeout(() => {
+        document.querySelector('#height').scrollIntoView()
+      }, 12000)
     },
     scrollToStart () {
       document.querySelector('#two').scrollIntoView({

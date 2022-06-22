@@ -377,6 +377,7 @@ button:active, button:focus {
   position: absolute;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  scroll-behavior: smooth;
 }
 
 .museum {
