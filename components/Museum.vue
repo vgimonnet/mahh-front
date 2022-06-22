@@ -7,10 +7,10 @@
           <img loading="lazy" src="@/assets/logo.svg" alt="">
         </a>
         <div class="content">
-          <h1 class="title">le voyage<br/>au-delà des normes</h1>
-          <p class="desc">Bienvenue dans l’exposition interactive sur le handicap. Là où le handicap est une force.</p>
-          <a class="enter-btn btn --big" @click="scrollToStart">Entrez</a>
-          <p class="credits">Créé par<br/><u>observatoire des politique du handicap</u></p>
+          <!-- <h1 class="title">le voyage<br/>au-delà des normes</h1> -->
+          <!-- <p class="desc">Bienvenue dans l’exposition interactive sur le handicap. Là où le handicap est une force.</p> -->
+          <a class="enter-btn" @click="scrollToStart">Découvrir</a>
+          <p class="credits">Créé par<br/><a href="https://www.observatoirehandicapmonde.com/" aria-label="Allez sur le site observatoire des politiques du handicap">observatoire des politiques du handicap</a></p>
         </div>
         <Player />
         <div class="btn-wrapper">
