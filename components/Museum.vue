@@ -83,7 +83,7 @@
         </a>
       </div>
       <div class="museum__slide --five">
-        <img loading="lazy" class="museum__pic" src="@/assets/slide5.png" alt="">
+        <img loading="lazy" class="museum__pic" src="@/assets/slide-5.png" alt="">
 
         <span class="anchor --second zoom-in"></span>
         <span class="anchor --second zoom-out"></span>
