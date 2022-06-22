@@ -1,13 +1,68 @@
 .btn {
   display: inline-block;
   text-align: center;
-  background-color: $black;
-  border-radius: 3.8rem;
-  color: $white;
-  padding: 2.5rem 5rem;
-  font-size: 2rem;
+  background-color: $brown;
+  border: 0;
+  border-radius: 6rem;
+  color: $light;
+  padding: 1.9rem 4.2rem;
+  font-size: 1.4rem;
+  line-height: 1.56;
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  background-color: $white;
+  color: $black;
+
+  &.--big {
+    padding: 2.5rem 6.5rem;
+  }
+}
+
+.btn-line {
+  position: relative;
+  display: inline-block;
+  border: 0;
+  background-color: transparent;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.04em;
+  font-size: 1.4rem;
+  line-height: 1.56;
+  color: $black;
+  padding: 0 0 2px;
+  opacity: 0.5;
+  cursor: pointer;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    transform: translateX(-50%);
+    background-image: url('@/assets/line.svg');
+    background-size: 100%;
+    background-position: center;
+  }
+
+  &::after {
+    content: '';
+    background-image: url('@/assets/chevron-down.svg');
+    background-size: contain;
+    width: 1.3rem;
+    height: 1.3rem;
+    display: inline-block;
+    margin-left: 1.2rem;
+  }
+
+  &.--active, &:hover {
+    &::before {
+      
+    }
+  }
 }
 
 .btn__detail {

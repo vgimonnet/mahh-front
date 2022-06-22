@@ -1,3 +1,75 @@
+@font-face {
+  font-family: "N27";
+  src: url("@/assets/fonts/N27-Regular.eot");
+  src: local("N27 Regular"), local("N27-Regular"), url("@/assets/fonts/N27-Regular.eot?#iefix") format("embedded-opentype"), url("@/assets/fonts/N27-Regular.woff2") format("woff2"), url("@/assets/fonts/N27-Regular.woff") format("woff"), url("@/assets/fonts/N27-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("@/assets/fonts/Manrope-ExtraLight.eot");
+  src: local("Manrope ExtraLight"), local("Manrope-ExtraLight"), url("@/assets/fonts/Manrope-ExtraLight.eot?#iefix") format("embedded-opentype"), url("@/assets/fonts/Manrope-ExtraLight.woff2") format("woff2"), url("@/assets/fonts/Manrope-ExtraLight.woff") format("woff"), url("@/assets/fonts/Manrope-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("@/assets/fonts/Manrope-Light.eot");
+  src: local("Manrope Light"), local("Manrope-Light"), url("@/assets/fonts/Manrope-Light.eot?#iefix") format("embedded-opentype"), url("@/assets/fonts/Manrope-Light.woff2") format("woff2"), url("@/assets/fonts/Manrope-Light.woff") format("woff"), url("@/assets/fonts/Manrope-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("@/assets/fonts/Manrope-SemiBold.eot");
+  src: local("Manrope SemiBold"), local("Manrope-SemiBold"), url("@/assets/fonts/Manrope-SemiBold.eot?#iefix") format("embedded-opentype"), url("@/assets/fonts/Manrope-SemiBold.woff2") format("woff2"), url("@/assets/fonts/Manrope-SemiBold.woff") format("woff"), url("@/assets/fonts/Manrope-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("@/assets/fonts/Manrope-Medium.eot");
+  src: local("Manrope Medium"), local("Manrope-Medium"), url("@/assets/fonts/Manrope-Medium.eot?#iefix") format("embedded-opentype"), url("@/assets/fonts/Manrope-Medium.woff2") format("woff2"), url("@/assets/fonts/Manrope-Medium.woff") format("woff"), url("@/assets/fonts/Manrope-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("@/assets/fonts/Manrope-Bold.eot");
+  src: local("Manrope Bold"), local("Manrope-Bold"), url("@/assets/fonts/Manrope-Bold.eot?#iefix") format("embedded-opentype"), url("@/assets/fonts/Manrope-Bold.woff2") format("woff2"), url("@/assets/fonts/Manrope-Bold.woff") format("woff"), url("@/assets/fonts/Manrope-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("@/assets/fonts/MabryPro-Black.eot");
+  src: local("Mabry Pro Black"), local("MabryPro-Black"), url("@/assets/fonts/MabryPro-Black.eot?#iefix") format("embedded-opentype"), url("@/assets/fonts/MabryPro-Black.woff2") format("woff2"), url("@/assets/fonts/MabryPro-Black.woff") format("woff"), url("@/assets/fonts/MabryPro-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("@/assets/fonts/Manrope-Regular.eot");
+  src: local("Manrope Regular"), local("Manrope-Regular"), url("@/assets/fonts/Manrope-Regular.eot?#iefix") format("embedded-opentype"), url("@/assets/fonts/Manrope-Regular.woff2") format("woff2"), url("@/assets/fonts/Manrope-Regular.woff") format("woff"), url("@/assets/fonts/Manrope-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("@/assets/fonts/Manrope-ExtraBold.eot");
+  src: local("Manrope ExtraBold"), local("Manrope-ExtraBold"), url("@/assets/fonts/Manrope-ExtraBold.eot?#iefix") format("embedded-opentype"), url("@/assets/fonts/Manrope-ExtraBold.woff2") format("woff2"), url("@/assets/fonts/Manrope-ExtraBold.woff") format("woff"), url("@/assets/fonts/Manrope-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   font-size: 62.5%;
 }
@@ -6,24 +78,69 @@ body {
   margin: 0;
   max-height: 100vh;
   overflow-y: hidden;
-}
-
-h1, .h1 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
+  line-height: 1.56;
+  font-weight: 500;
+  font-family: "Manrope";
 }
 
 .btn {
   display: inline-block;
   text-align: center;
-  background-color: #000;
-  border-radius: 3.8rem;
-  color: #fff;
-  padding: 2.5rem 5rem;
-  font-size: 2rem;
+  background-color: #AD8665;
+  border: 0;
+  border-radius: 6rem;
+  color: #EDE9E3;
+  padding: 1.9rem 4.2rem;
+  font-size: 1.4rem;
+  line-height: 1.56;
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  background-color: #fff;
+  color: #191919;
+}
+.btn.--big {
+  padding: 2.5rem 6.5rem;
 }
 
+.btn-line {
+  position: relative;
+  display: inline-block;
+  border: 0;
+  background-color: transparent;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.04em;
+  font-size: 1.4rem;
+  line-height: 1.56;
+  color: #191919;
+  padding: 0 0 2px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.btn-line::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  transform: translateX(-50%);
+  background-image: url("@/assets/line.svg");
+  background-size: 100%;
+  background-position: center;
+}
+.btn-line::after {
+  content: "";
+  background-image: url("@/assets/chevron-down.svg");
+  background-size: contain;
+  width: 1.3rem;
+  height: 1.3rem;
+  display: inline-block;
+  margin-left: 1.2rem;
+}
 .btn__detail {
   padding: 1.2rem 1.5rem;
   background-color: #fff;
@@ -114,7 +231,7 @@ h1, .h1 {
 }
 .modal .modal-header h2 {
   font-size: 6.2rem;
-  color: #000;
+  color: #191919;
   margin: 0;
 }
 .modal .modal p + p {
@@ -156,7 +273,7 @@ h1, .h1 {
 .modal .modal-footer a::after {
   content: "";
   width: 100%;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #191919;
   position: absolute;
   bottom: -0.2rem;
 }
@@ -170,6 +287,7 @@ h1, .h1 {
   position: absolute;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  scroll-behavior: smooth;
 }
 
 .museum {
@@ -179,7 +297,6 @@ h1, .h1 {
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
   overflow: hidden;
-  cursor: pointer;
   overflow-x: scroll;
 }
 .museum.active {
@@ -189,6 +306,15 @@ h1, .h1 {
 .museum__slide {
   height: 100vh;
   position: relative;
+}
+.museum__slide:first-child::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 19rem;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(54, 45, 45, 0.6) 0%, rgba(54, 45, 45, 0) 100%);
 }
 .museum__slide.--four a#decouvrir {
   position: absolute;
@@ -257,6 +383,20 @@ h1, .h1 {
   left: -5.5%;
   top: 0%;
 }
+.museum .content {
+  position: absolute;
+}
+.museum__logo {
+  position: absolute;
+  display: inline-block;
+  left: 5rem;
+  top: 5rem;
+}
+.museum__logo img {
+  display: block;
+  width: 17rem;
+  height: 8.5rem;
+}
 
 ::-webkit-scrollbar {
   display: none;
@@ -278,6 +418,122 @@ h1, .h1 {
   100% {
     -webkit-transform: rotate(360deg);
   }
+}
+.--one .content {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50rem;
+  text-align: center;
+}
+.--one .title {
+  font-size: 3.8rem;
+  line-height: 1.56;
+  font-weight: 400;
+  margin: 0 0 4rem;
+  text-transform: uppercase;
+  font-family: "Mabry Pro";
+}
+.--one .desc {
+  max-width: 30rem;
+  margin: 3rem auto;
+}
+.--one .credits {
+  font-size: 1rem;
+  line-height: 1.46;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0.4;
+  margin-top: 17rem;
+}
+@keyframes guide-btn {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.--one .enter-btn {
+  background-color: #AD8665;
+  color: #fff;
+}
+.--one .enter-btn::after {
+  margin-left: 1.2rem;
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-image: url("@/assets/chevron.png");
+  background-size: cover;
+}
+.--one .sound-btn {
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  background-color: #fff;
+  color: #191919;
+  background-image: url("@/assets/mute.svg");
+  background-size: 3rem 2.7rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  left: 5rem;
+  bottom: 5rem;
+}
+.--one .sound-btn.--active, .--one .sound-btn:hover {
+  background-image: url("@/assets/sound.svg");
+}
+.--one .btn-wrapper {
+  position: absolute;
+  right: 5rem;
+  bottom: 5rem;
+}
+.--one .accessibility-btn {
+  background-color: #EDE9E3;
+}
+.--one .guide-btn {
+  margin-right: 1.8rem;
+}
+.--one .guide-btn::before {
+  content: "";
+  background-image: url("@/assets/union.svg");
+  background-size: cover;
+  display: inline-block;
+  margin-right: 0.5rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation-name: guide-btn;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: opacity ease 0.2s;
+}
+.--one .guide-btn.--active::before, .--one .guide-btn:hover::before {
+  opacity: 1;
+}
+
+.--two .timeline {
+  display: none;
+}
+
+.--five .content {
+  position: absolute;
+}
+.--five .btn-line-wrapper {
+  position: absolute;
+  top: 30%;
+  left: 36%;
 }
 
 /*# sourceMappingURL=style.css.map */

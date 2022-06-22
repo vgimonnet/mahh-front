@@ -1,12 +1,16 @@
 
 @import './variables';
-@import './utils/typo.scss';
+@import './utils/fonts';
+@import './utils/typo';
 
 // Components
 @import './components/button';
 @import './components/intro';
 @import './components/modal';
 @import './components/museum';
+@import './components/slide-1';
+@import './components/slide-2';
+@import './components/slide-5';
 
 // Pages
 @import './pages/home';

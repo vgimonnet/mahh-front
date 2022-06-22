@@ -3,12 +3,33 @@
     <div class="museum">
       <div class="museum__slide --one">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-1.png" alt="">
-        <div class="museum__content">
-
+        <a class="museum__logo" href="/">
+          <img loading="lazy" src="@/assets/logo.svg" alt="">
+        </a>
+        <div class="content">
+          <h1 class="title">le voyage<br/>au-delà des normes</h1>
+          <p class="desc">Bienvenue dans l’exposition interactive sur le handicap. Là où le handicap est une force.</p>
+          <a class="enter-btn btn --big" href="#two">Entrez</a>
+          <p class="credits">Créé par<br/><u>observatoire des politique du handicap</u></p>
+        </div>
+        <button class="sound-btn"></button>
+        <div class="btn-wrapper">
+          <button class="guide-btn btn">Visite guidée</button>
+          <NuxtLink class="accessibility-btn btn" to="/accessibilite">Accessibilité</NuxtLink>
         </div>
       </div>
-      <div class="museum__slide --two">
+      <div id="two" class="museum__slide --two">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-2.png" alt="">
+        <div class="timeline">
+          <input
+            type="range"
+            name=""
+            id="timeline-range"
+            min="0"
+            max="50"
+            :v-model="timeline"
+          >
+        </div>
       </div>
       <div class="museum__slide --three">
         <img class="museum__pic" src="@/assets/slide-3.png" alt="">
@@ -63,6 +84,12 @@
       </div>
       <div class="museum__slide --five">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-5.png" alt="">
+        <div class="content">
+
+        </div>
+        <div class="btn-line-wrapper">
+          <button class="movie-btn btn-line">Visonnez le film</button>
+        </div>
       </div>
       <div class="museum__slide --six">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-6.png" alt="">
@@ -89,6 +116,7 @@ export default {
   name: 'MuseumComponent',
   data () {
     return {
+      timeline: 0,
       oeuvres,
       oeuvre: {
         date: null,
