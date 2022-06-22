@@ -1,5 +1,11 @@
 .--two {
   .timeline {
-    display: none;
+    position: absolute;
+    left: 5rem;
+    bottom: 5rem;
+    
+    input {
+      display: none;
+    }
   }
 }
