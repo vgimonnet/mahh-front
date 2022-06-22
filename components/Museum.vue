@@ -3,11 +3,23 @@
     <div class="museum">
       <div class="museum__slide --one">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-1.png" alt="">
-        <div class="museum__content">
-
+        <a class="museum__logo" href="/">
+          <img loading="lazy" src="@/assets/logo.svg" alt="">
+        </a>
+        <div class="content">
+          <h1 class="title">le voyage<br/>au-delà des normes</h1>
+          <p class="desc">Bienvenue dans l’exposition interactive sur le handicap. Là où le handicap est une force.</p>
+          <a class="enter-btn btn --big" href="#two">Entrez</a>
+          <p class="credits">Créé par<br/><u>observatoire des politique du handicap</u></p>
         </div>
+        <button class="sound-btn"></button>
+        <div class="btn-wrapper">
+          <button class="guide-btn btn">Visite guidée</button>
+          <button class="accessibility-btn btn">Accessibilité</button>
+        </div>
+
       </div>
-      <div class="museum__slide --two">
+      <div id="two" class="museum__slide --two">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-2.png" alt="">
       </div>
       <div class="museum__slide --three">
@@ -38,9 +50,28 @@
 <script>
 export default {
   name: 'MuseumComponent',
-  mounted () {
+  data () {
+    return {
+      totalWidth: 0
+    }
+  },
+  async mounted () {
     const slider = document.querySelector('.museum')
-    slider.style.width = slider.offsetHeight * slider.children.length + 'px'
+    const imgs = document.querySelectorAll('.museum img')
+    this.totalWidth = 0
+    const resolveArray = []
+    imgs.forEach((child) => {
+      resolveArray.push(new Promise((resolve) => {
+        child.addEventListener('load', (e) => {
+          this.totalWidth += e.target.offsetWidth
+          resolve()
+        })
+      }))
+    })
+
+    await Promise.all(resolveArray)
+    // slider.style.width = (this.totalWidth / window.innerWidth) * 100 + 'vw'
+    // slider.style.width = slider.offsetHeight * slider.children.length + 'px'
     let isDown = false
     let startX
     let scrollLeft

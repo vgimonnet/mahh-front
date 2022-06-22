@@ -11,9 +11,11 @@
 }
 
 .museum {
+  $m: &;
   display: flex;
   flex-direction: row;
-  width: fit-content;
+  // width: fit-content;
+  width: 100vw;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
   overflow: hidden;
@@ -28,11 +30,38 @@
   &__slide {
     height: 100vh;
     position: relative;
+
+    &:first-child::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 19rem;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(54, 45, 45, 0.6) 0%, rgba(54, 45, 45, 0) 100%);
+    }
   }
 
   &__pic {
     display: block;
     height: 100%;
+  }
+
+  .content {
+    position: absolute;
+  }
+
+  &__logo {
+    position: absolute;
+    display: inline-block;
+    left: 5rem;
+    top: 5rem;
+    
+    img {
+      display: block;
+      width: 17rem;
+      height: 8.5rem;
+    }
   }
 }
 
