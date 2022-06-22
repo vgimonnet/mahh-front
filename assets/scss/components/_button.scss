@@ -85,13 +85,19 @@
     left: 69.5%;
   }
 
+  &.--second {
+    position: absolute;
+    top: 53%;
+    left: 18%;
+  }
+
   &:hover {
     transform: rotate(180deg);
   }
 
-  &.zoom {
-    visibility: hidden;
-  }
+  // &.zoom {
+  //   visibility: hidden;
+  // }
 }
 .btn__zoom {
   padding: 0.6rem 0.9rem;
@@ -113,20 +119,36 @@
     left: 69.85%;
   }
 
+  &.--second {
+    position: absolute;
+    top: 61%;
+    left: 18.65%;
+  }
+
   &:hover {
     transform: scale(1.4);
   }
+}
 
-  &.zoom {
-    transform: scale(2);
+.zoom {
+  .btn__zoom {
+    transform: scale(2) !important;
 
     &:hover {
-      transform: scale(1);
+      transform: scale(1) !important;
     }
 
     &.--first {
-      left: 70.5%;
+      left: 70.5% !important;
     }
+
+    &.--second {
+      left: 19.15% !important;
+    }
+  }
+
+  .btn__detail {
+    visibility: hidden !important;
   }
 }
 

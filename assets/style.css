@@ -159,11 +159,13 @@ body {
   top: 53%;
   left: 69.5%;
 }
+.btn__detail.--second {
+  position: absolute;
+  top: 53%;
+  left: 18%;
+}
 .btn__detail:hover {
   transform: rotate(180deg);
-}
-.btn__detail.zoom {
-  visibility: hidden;
 }
 
 .btn__zoom {
@@ -184,17 +186,29 @@ body {
   top: 61%;
   left: 69.85%;
 }
+.btn__zoom.--second {
+  position: absolute;
+  top: 61%;
+  left: 18.65%;
+}
 .btn__zoom:hover {
   transform: scale(1.4);
 }
-.btn__zoom.zoom {
-  transform: scale(2);
+
+.zoom .btn__zoom {
+  transform: scale(2) !important;
 }
-.btn__zoom.zoom:hover {
-  transform: scale(1);
+.zoom .btn__zoom:hover {
+  transform: scale(1) !important;
 }
-.btn__zoom.zoom.--first {
-  left: 70.5%;
+.zoom .btn__zoom.--first {
+  left: 70.5% !important;
+}
+.zoom .btn__zoom.--second {
+  left: 19.15% !important;
+}
+.zoom .btn__detail {
+  visibility: hidden !important;
 }
 
 button:active, button:focus {
@@ -377,6 +391,9 @@ button:active, button:focus {
 .museum.zoom .museum__slide.--three {
   margin-top: -23rem;
 }
+.museum.zoom .museum__slide.--four, .museum.zoom .museum__slide.--five {
+  margin-top: -23rem;
+}
 .museum .anchor {
   width: 10px;
   height: 10px;
@@ -388,6 +405,14 @@ button:active, button:focus {
 }
 .museum .anchor.--first.zoom-out {
   left: -5.5%;
+  top: 0%;
+}
+.museum .anchor.--second.zoom-in {
+  left: -27.5%;
+  top: 0%;
+}
+.museum .anchor.--second.zoom-out {
+  left: -55.5%;
   top: 0%;
 }
 .museum .content {

@@ -101,6 +101,9 @@
       &.--three {
         margin-top: -23rem;
       }
+      &.--four, &.--five {
+        margin-top: -23rem;
+      }
     }
   }
 
@@ -109,12 +112,12 @@
     width: 10px;
     height: 10px;
     position: absolute;
-    &.zoom-in {
-      // background-color: red;
-    }
-    &.zoom-out {
-      // background-color: blue;
-    }
+    // &.zoom-in {
+    //   background-color: red;
+    // }
+    // &.zoom-out {
+    //   background-color: blue;
+    // }
     &.--first {
       &.zoom-in {
         left: 23.5%;
@@ -122,6 +125,16 @@
       }
       &.zoom-out {
         left: -5.5%;
+        top: 0%;
+      }
+    }
+    &.--second {
+      &.zoom-in {
+        left: -27.5%;
+        top: 0%;
+      }
+      &.zoom-out {
+        left: -55.5%;
         top: 0%;
       }
     }

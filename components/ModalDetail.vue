@@ -37,7 +37,8 @@
 <script>
 
 const positions = {
-  0: 'top: 200%'
+  0: 'top: 200%',
+  1: 'top: 336%'
 }
 
 export default {
@@ -54,9 +55,16 @@ export default {
       this.$emit('close-modal')
     },
     onClickOut (event) {
+      console.log('clickOut', event.target.id)
       if (event.target.id === 'modalDetail') {
+        console.log('ok')
         this.closeModal()
       }
+    }
+  },
+  watch: {
+    index (val) {
+      this.position = positions[val]
     }
   }
 }
