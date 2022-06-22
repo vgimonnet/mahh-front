@@ -27,6 +27,15 @@
       </div>
       <div class="museum__slide --four">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-4.png" alt="">
+        <a href="#" id="decouvrir">
+          <div>
+            <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.97998 1.29272H11.4545V11.7673" stroke="#191919"/>
+              <line x1="0.782189" y1="11.9907" x2="11.1012" y2="1.67172" stroke="#191919"/>
+            </svg>
+            <img loading="lazy" class="museum__decouvrir" src="@/assets/decouvrir.svg" alt="Découvrir le jeu">
+          </div>
+        </a>
       </div>
       <div class="museum__slide --five">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-5.png" alt="">
@@ -49,56 +58,6 @@
 
 <script>
 export default {
-  name: 'MuseumComponent',
-  data () {
-    return {
-      totalWidth: 0
-    }
-  },
-  async mounted () {
-    const slider = document.querySelector('.museum')
-    const imgs = document.querySelectorAll('.museum img')
-    this.totalWidth = 0
-    const resolveArray = []
-    imgs.forEach((child) => {
-      resolveArray.push(new Promise((resolve) => {
-        child.addEventListener('load', (e) => {
-          this.totalWidth += e.target.offsetWidth
-          resolve()
-        })
-      }))
-    })
-
-    await Promise.all(resolveArray)
-    // slider.style.width = (this.totalWidth / window.innerWidth) * 100 + 'vw'
-    // slider.style.width = slider.offsetHeight * slider.children.length + 'px'
-    let isDown = false
-    let startX
-    let scrollLeft
-
-    slider.addEventListener('mousedown', (e) => {
-      isDown = true
-      slider.classList.add('active')
-      startX = e.pageX - slider.offsetLeft
-      scrollLeft = slider.scrollLeft
-    })
-    slider.addEventListener('mouseleave', () => {
-      isDown = false
-      slider.classList.remove('active')
-    })
-    slider.addEventListener('mouseup', () => {
-      isDown = false
-      slider.classList.remove('active')
-    })
-    slider.addEventListener('mousemove', (e) => {
-      if (!isDown) {
-        return
-      }
-      e.preventDefault()
-      const x = e.pageX - slider.offsetLeft
-      const walk = (x - startX) * 3 // scroll-fast
-      slider.scrollLeft = scrollLeft - walk
-    })
-  }
+  name: 'MuseumComponent'
 }
 </script>

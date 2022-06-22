@@ -80,6 +80,47 @@ body {
   height: 100%;
   background: linear-gradient(90deg, rgba(54, 45, 45, 0.6) 0%, rgba(54, 45, 45, 0) 100%);
 }
+.museum__slide.--four a#decouvrir {
+  position: absolute;
+  top: 33%;
+  left: 35%;
+}
+.museum__slide.--four a#decouvrir div {
+  position: relative;
+}
+.museum__slide.--four a#decouvrir div img {
+  width: 7.5rem;
+  height: 7.5rem;
+  position: absolute;
+  -webkit-animation: infiniteRotate 10s linear infinite; /* Safari */
+  animation: infiniteRotate 10s linear infinite;
+  padding: 2px 3px 2px 1px;
+  transition: background-color 0.5s ease-in-out;
+  border-radius: 50%;
+}
+.museum__slide.--four a#decouvrir div svg {
+  width: 14px;
+  height: 11px;
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  padding: 16px 15px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: -1px 2px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: background-color 0.5s ease-in-out;
+}
+.museum__slide.--four a#decouvrir:hover div svg {
+  padding: 34px 32px;
+  top: -2px;
+  left: -1px;
+  background-color: transparent;
+  z-index: 99999;
+  box-shadow: none;
+}
+.museum__slide.--four a#decouvrir:hover div img {
+  background-color: #FFFFFF;
+}
 .museum__pic {
   display: block;
   height: 100%;
@@ -103,6 +144,23 @@ body {
   display: none;
 }
 
+@-webkit-keyframes infiniteRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+/* Standard syntax */
+@keyframes infinite-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
 .--one .content {
   left: 50%;
   top: 50%;
