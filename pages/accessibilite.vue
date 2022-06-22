@@ -18,8 +18,12 @@
       <img loading="lazy" :src="require(`../assets/oeuvres/oeuvre-${ index + 1 }.jpg`)" alt="Photographie de l'oeuvre">
       <div>
         <h2>{{ oeuvre.date }}</h2>
-        <h3>{{ clearText(oeuvre.title) }}</h3>
-        <p>{{ clearText(oeuvre.content) }}</p>
+        <h3>{{ oeuvre.title }}</h3>
+        <p>{{ oeuvre.content }}</p>
+        <audio controls>
+          <source src="/jazzy.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
       </div>
     </section>
     <footer>Footer</footer>
@@ -38,11 +42,6 @@ export default {
   },
   mounted () {
     document.querySelector('body').classList.add('accessibilite')
-  },
-  methods: {
-    clearText (text) {
-      return text.replace('</br>', ' ')
-    }
   }
 }
 </script>

@@ -13,10 +13,10 @@
         <h2>
           {{ data.date }}
         </h2>
+        <h3 v-html="data.title"></h3>
       </div>
 
       <section class="modal-content">
-        <h3 v-html="data.title"></h3>
         <p v-html="data.content"></p>
       </section>
 

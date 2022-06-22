@@ -70,6 +70,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Editorial New";
+  src: url("@/assets/fonts/EditorialNewRegular400.otf");
+  font-weight: regular;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   font-size: 62.5%;
 }
@@ -315,16 +322,27 @@ button:active, button:focus {
   cursor: default;
   transform: rotate(90deg);
   padding: 5rem;
-  max-width: 50%;
+  max-width: 70%;
   max-height: 35%;
 }
+.modal .modal-header {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+}
 .modal .modal-header h2 {
-  font-size: 6.2rem;
+  font-size: 5rem;
   color: #191919;
   margin: 0;
+  font-family: "Editorial New";
+  color: #A1A09D;
 }
-.modal .modal p + p {
-  margin-top: 1rem;
+.modal .modal-header h3 {
+  font-size: 2.4rem;
+  line-height: 166%;
+  text-transform: uppercase;
+  font-family: "Editorial New";
+  margin-bottom: 0;
 }
 .modal .btn__close {
   padding: 1rem 1.2rem;
@@ -337,16 +355,13 @@ button:active, button:focus {
   box-shadow: 0 4px 4px 0 rgba(107, 83, 83, 0.1254901961);
   cursor: pointer;
 }
-.modal .modal-content {
-  padding: 5rem;
-}
-.modal .modal-content h3 {
+.modal .modal-content p {
+  line-height: 170%;
   font-size: 1.4rem;
-  line-height: 166%;
-  text-transform: uppercase;
 }
 .modal .modal-footer {
   display: flex;
+  margin-top: 5rem;
 }
 .modal .modal-footer a {
   margin-left: auto;
@@ -696,7 +711,7 @@ main#accessibilite h1 {
   display: flex;
   position: relative;
   width: fit-content;
-  margin: auto;
+  margin: 0 auto 5rem auto;
   padding-top: 9rem;
 }
 main#accessibilite h1::after {
