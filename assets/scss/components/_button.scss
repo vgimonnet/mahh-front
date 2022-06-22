@@ -64,3 +64,94 @@
     }
   }
 }
+
+.btn__detail {
+  padding: 1.2rem 1.5rem;
+  background-color: $white;
+  border-radius: 50%;
+  border: none;
+  height: fit-content;
+  box-shadow: -1px 2px 2px 0 $box-shadow;
+  transition: transform 1s ease;
+
+  img {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &.--first {
+    position: absolute;
+    top: 53%;
+    left: 69.5%;
+  }
+
+  &.--second {
+    position: absolute;
+    top: 53%;
+    left: 18%;
+  }
+
+  &:hover {
+    transform: rotate(180deg);
+  }
+
+  // &.zoom {
+  //   visibility: hidden;
+  // }
+}
+.btn__zoom {
+  padding: 0.6rem 0.9rem;
+  background-color: $white;
+  border-radius: 50%;
+  border: none;
+  height: fit-content;
+  box-shadow: -1px 2px 2px 0 $box-shadow;
+  transition: transform .5s ease;
+  
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &.--first {
+    position: absolute;
+    top: 61%;
+    left: 69.85%;
+  }
+
+  &.--second {
+    position: absolute;
+    top: 61%;
+    left: 18.65%;
+  }
+
+  &:hover {
+    transform: scale(1.4);
+  }
+}
+
+.zoom {
+  .btn__zoom {
+    transform: scale(2) !important;
+
+    &:hover {
+      transform: scale(1) !important;
+    }
+
+    &.--first {
+      left: 70.5% !important;
+    }
+
+    &.--second {
+      left: 19.15% !important;
+    }
+  }
+
+  .btn__detail {
+    visibility: hidden !important;
+  }
+}
+
+button:active, button:focus {
+  border: none;
+}

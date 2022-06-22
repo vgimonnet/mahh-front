@@ -141,6 +141,80 @@ body {
   display: inline-block;
   margin-left: 1.2rem;
 }
+.btn__detail {
+  padding: 1.2rem 1.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  height: fit-content;
+  box-shadow: -1px 2px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: transform 1s ease;
+}
+.btn__detail img {
+  width: 1rem;
+  height: 1rem;
+}
+.btn__detail.--first {
+  position: absolute;
+  top: 53%;
+  left: 69.5%;
+}
+.btn__detail.--second {
+  position: absolute;
+  top: 53%;
+  left: 18%;
+}
+.btn__detail:hover {
+  transform: rotate(180deg);
+}
+
+.btn__zoom {
+  padding: 0.6rem 0.9rem;
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  height: fit-content;
+  box-shadow: -1px 2px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: transform 0.5s ease;
+}
+.btn__zoom svg {
+  width: 1rem;
+  height: 1rem;
+}
+.btn__zoom.--first {
+  position: absolute;
+  top: 61%;
+  left: 69.85%;
+}
+.btn__zoom.--second {
+  position: absolute;
+  top: 61%;
+  left: 18.65%;
+}
+.btn__zoom:hover {
+  transform: scale(1.4);
+}
+
+.zoom .btn__zoom {
+  transform: scale(2) !important;
+}
+.zoom .btn__zoom:hover {
+  transform: scale(1) !important;
+}
+.zoom .btn__zoom.--first {
+  left: 70.5% !important;
+}
+.zoom .btn__zoom.--second {
+  left: 19.15% !important;
+}
+.zoom .btn__detail {
+  visibility: hidden !important;
+}
+
+button:active, button:focus {
+  border: none;
+}
+
 .intro {
   display: flex;
   justify-content: center;
@@ -149,6 +223,81 @@ body {
   width: 100%;
   height: 100vh;
   text-align: center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.35s ease-in;
+  z-index: 9999;
+}
+.modal .modal-dialog {
+  position: absolute;
+  border-radius: 2rem;
+  background: rgba(252, 249, 244, 0.9411764706);
+  overflow: auto;
+  cursor: default;
+  transform: rotate(90deg);
+  padding: 5rem;
+  max-width: 50%;
+  max-height: 35%;
+}
+.modal .modal-header h2 {
+  font-size: 6.2rem;
+  color: #191919;
+  margin: 0;
+}
+.modal .modal p + p {
+  margin-top: 1rem;
+}
+.modal .btn__close {
+  padding: 1rem 1.2rem;
+  position: absolute;
+  top: 2.2rem;
+  right: 2.2rem;
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(107, 83, 83, 0.1254901961);
+  cursor: pointer;
+}
+.modal .modal-content {
+  padding: 5rem;
+}
+.modal .modal-content h3 {
+  font-size: 1.4rem;
+  line-height: 166%;
+  text-transform: uppercase;
+}
+.modal .modal-footer {
+  display: flex;
+}
+.modal .modal-footer a {
+  margin-left: auto;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+}
+.modal .modal-footer a svg {
+  margin-left: 1rem;
+}
+.modal .modal-footer a::after {
+  content: "";
+  width: 100%;
+  border-bottom: 1px solid #191919;
+  position: absolute;
+  bottom: -0.2rem;
 }
 
 .outer-wrapper {
@@ -160,7 +309,6 @@ body {
   position: absolute;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  scroll-behavior: smooth;
 }
 
 .museum {
@@ -234,6 +382,39 @@ body {
   display: block;
   height: 100%;
 }
+.museum.zoom {
+  overflow-x: hidden;
+}
+.museum.zoom .museum__slide {
+  height: 200vh;
+}
+.museum.zoom .museum__slide.--three {
+  margin-top: -23rem;
+}
+.museum.zoom .museum__slide.--four, .museum.zoom .museum__slide.--five {
+  margin-top: -23rem;
+}
+.museum .anchor {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+}
+.museum .anchor.--first.zoom-in {
+  left: 23.5%;
+  top: 0%;
+}
+.museum .anchor.--first.zoom-out {
+  left: -5.5%;
+  top: 0%;
+}
+.museum .anchor.--second.zoom-in {
+  left: -27.5%;
+  top: 0%;
+}
+.museum .anchor.--second.zoom-out {
+  left: -55.5%;
+  top: 0%;
+}
 .museum .content {
   position: absolute;
 }
@@ -247,6 +428,10 @@ body {
   display: block;
   width: 17rem;
   height: 8.5rem;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 ::-webkit-scrollbar {
