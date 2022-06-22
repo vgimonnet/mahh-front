@@ -83,6 +83,9 @@ body {
   font-weight: 500;
   font-family: "Manrope";
 }
+body.accessibilite {
+  overflow: auto;
+}
 
 .btn {
   display: inline-block;
@@ -681,6 +684,103 @@ button:active, button:focus {
   position: absolute;
   top: 30%;
   left: 36%;
+}
+
+main#accessibilite {
+  background-color: #EDE9E3;
+}
+main#accessibilite h1, main#accessibilite h2, main#accessibilite h3 {
+  font-family: "N27";
+}
+main#accessibilite h1 {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  padding-top: 9rem;
+}
+main#accessibilite h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  border-bottom: 0.2rem solid #191919;
+  margin-top: 2rem;
+  width: 50%;
+  margin-left: 25%;
+}
+main#accessibilite h2 {
+  margin-top: 0;
+  display: flex;
+  position: relative;
+  width: fit-content;
+}
+main#accessibilite h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  border-bottom: 0.2rem solid #191919;
+  margin-top: 2rem;
+  width: 75%;
+}
+main#accessibilite section {
+  padding: 2rem 5rem;
+  display: flex;
+  width: fill-available;
+  width: -webkit-fill-available;
+  width: -moz-available;
+}
+main#accessibilite section div {
+  width: 65%;
+  padding: 0 0 0 2rem;
+}
+main#accessibilite section img {
+  object-fit: cover;
+  max-width: 25%;
+}
+main#accessibilite header {
+  height: 7rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 2rem);
+  background-color: #EDE9E3;
+  position: fixed;
+  z-index: 99999;
+  border-bottom: 0.2rem solid #AD8665;
+}
+main#accessibilite header img {
+  max-height: 5rem;
+}
+main#accessibilite header nav {
+  width: fill-available;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  display: flex;
+  align-items: center;
+}
+main#accessibilite header nav a {
+  margin-right: 1rem;
+  color: #191919;
+}
+main#accessibilite header nav a:last-child {
+  margin: 0 0 0 auto;
+  background-color: #AD8665;
+  border-radius: 3rem;
+  padding: 1.2rem 3rem;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.5s ease;
+  border: 0.2rem solid #AD8665;
+}
+main#accessibilite header nav a:last-child:hover {
+  background-color: #EDE9E3;
+  color: #AD8665;
+}
+main#accessibilite header nav a.active {
+  color: #AD8665;
+}
+main#accessibilite header nav a:first-child {
+  margin-left: 3rem;
 }
 
 main#loader {

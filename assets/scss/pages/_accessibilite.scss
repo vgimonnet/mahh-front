@@ -1,0 +1,105 @@
+main#accessibilite {
+  background-color: $light;
+  
+  h1, h2, h3 {
+    font-family: 'N27';
+  }
+
+  h1 {
+    display: flex;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    padding-top: 9rem;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      border-bottom: .2rem solid $black;
+      margin-top: 2rem;
+      width: 50%;
+      margin-left: 25%;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+    display: flex;
+    position: relative;
+    width: fit-content;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      border-bottom: .2rem solid $black;
+      margin-top: 2rem;
+      width: 75%;
+    }
+
+  }
+
+  section {
+    padding: 2rem 5rem;
+    display: flex;
+    width: fill-available;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    div {
+      width: 65%;
+      padding: 0 0 0 2rem;
+    }
+    img {
+      object-fit: cover;
+      max-width: 25%;
+    }
+  }
+
+  header {
+    height: 7rem;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 2rem);
+    background-color: $light;
+    position: fixed;
+    z-index: 99999;
+    border-bottom: .2rem solid $brown;
+
+    img {
+      max-height: 5rem;
+    }
+
+    nav {
+      width: fill-available;
+      width: -webkit-fill-available;
+      width: -moz-available;
+      display: flex;
+      align-items: center;
+      a {
+        margin-right: 1rem;
+        // text-decoration: none;
+        color: $black;
+        &:last-child {
+          margin: 0 0 0 auto;
+          background-color: $brown;
+          border-radius: 3rem;
+          padding: 1.2rem 3rem;
+          text-decoration: none;
+          color: $white;
+          transition: all .5s ease;
+          border: .2rem solid $brown;
+          &:hover { 
+            background-color: $light;
+            color: $brown;
+          }
+        }
+        &.active {
+          color: $brown;
+        }
+        &:first-child {
+          margin-left: 3rem;
+        }
+      }
+    }
+  }
+}

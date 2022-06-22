@@ -1,11 +1,48 @@
 <template>
-  <div>
+  <main id="accessibilite">
+    <header>
+      <a class="" href="/">
+        <img loading="lazy" src="@/assets/logo.svg" alt="">
+      </a>
+      <nav>
+        <a href="/museum">Musée virtuel</a>
+        <a href="#" class="active">Accessibilité</a>
+        <a href="#">Actualités</a>
+        <a href="#">Contact</a>
+        <a href="#">Comment venir ?</a>
+        <a href="#" id="btn__billeterie">Billeterie</a>
+      </nav>
+    </header>
     <h1>Accessibilité</h1>
-  </div>
+    <section v-for="(oeuvre, index) in oeuvres" :key="index">
+      <img loading="lazy" :src="require(`../assets/oeuvres/oeuvre-${ index + 1 }.jpg`)" alt="Photographie de l'oeuvre">
+      <div>
+        <h2>{{ oeuvre.date }}</h2>
+        <h3>{{ clearText(oeuvre.title) }}</h3>
+        <p>{{ clearText(oeuvre.content) }}</p>
+      </div>
+    </section>
+    <footer>Footer</footer>
+  </main>
 </template>
 
 <script>
+import oeuvres from '../data/oeuvres.json'
+
 export default {
-  name: 'AccessibilityPage'
+  name: 'AccessibilityPage',
+  data () {
+    return {
+      oeuvres
+    }
+  },
+  mounted () {
+    document.querySelector('body').classList.add('accessibilite')
+  },
+  methods: {
+    clearText (text) {
+      return text.replace('</br>', ' ')
+    }
+  }
 }
 </script>
