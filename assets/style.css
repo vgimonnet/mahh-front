@@ -464,12 +464,6 @@ button:active, button:focus {
   height: 10px;
   position: absolute;
 }
-.museum .anchor.zoom-in {
-  background-color: red;
-}
-.museum .anchor.zoom-out {
-  background-color: blue;
-}
 .museum .anchor.--first.zoom-in {
   left: 23.5%;
   top: 0%;

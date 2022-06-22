@@ -112,12 +112,12 @@
     width: 10px;
     height: 10px;
     position: absolute;
-    &.zoom-in {
-      background-color: red;
-    }
-    &.zoom-out {
-      background-color: blue;
-    }
+    // &.zoom-in {
+    //   background-color: red;
+    // }
+    // &.zoom-out {
+    //   background-color: blue;
+    // }
     &.--first {
       &.zoom-in {
         left: 23.5%;
