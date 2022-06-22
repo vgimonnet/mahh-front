@@ -9,7 +9,7 @@
         <div class="content">
           <h1 class="title">le voyage<br/>au-delà des normes</h1>
           <p class="desc">Bienvenue dans l’exposition interactive sur le handicap. Là où le handicap est une force.</p>
-          <a class="enter-btn btn --big" href="#two">Entrez</a>
+          <a class="enter-btn btn --big" @click="scrollToStart">Entrez</a>
           <p class="credits">Créé par<br/><u>observatoire des politique du handicap</u></p>
         </div>
         <Player />
@@ -383,6 +383,11 @@ export default {
           top: 10
         })
       }, 150) */
+    },
+    scrollToStart () {
+      document.querySelector('#two').scrollIntoView({
+        behavior: 'smooth'
+      })
     }
   }
 }
