@@ -70,7 +70,7 @@
           </svg>
         </button>
       </div>
-      <div class="museum__slide --four">
+      <div id="four" class="museum__slide --four">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-4.png" alt="">
         <a href="#" id="decouvrir">
           <div>
