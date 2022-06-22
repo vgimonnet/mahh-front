@@ -374,9 +374,7 @@ export default {
         museum.classList.add('zoom')
         wrapper.scrollTop = (scrollPosition * 2)
       }
-    }
-  },
-  methods: {
+    },
     scrollToEnd () {
       /* setInterval(() => {
         document.querySelector('.outer-wrapper').scrollBy({
