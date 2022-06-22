@@ -88,7 +88,7 @@
 
         </div>
         <div class="btn-line-wrapper">
-          <button class="movie-btn btn-line">Visonnez le film</button>
+          <button class="movie-btn btn-line">Visionnez le film</button>
         </div>
       </div>
       <div class="museum__slide --six">
@@ -128,40 +128,6 @@ export default {
       indexOeuvre: 0
     }
   },
-  mounted () {
-    const slider = document.querySelector('.museum')
-    // let totalWidth = 0
-    // Array.from(slider.children).forEach((item) => {
-    //   totalWidth += item.offsetWidth
-    // })
-    // slider.style.width = totalWidth + 'px'
-    let isDown = false
-    let startX
-    let scrollLeft
-    slider.addEventListener('mousedown', (e) => {
-      isDown = true
-      slider.classList.add('active')
-      startX = e.pageX - slider.offsetLeft
-      scrollLeft = slider.scrollLeft
-    })
-    slider.addEventListener('mouseleave', () => {
-      isDown = false
-      slider.classList.remove('active')
-    })
-    slider.addEventListener('mouseup', () => {
-      isDown = false
-      slider.classList.remove('active')
-    })
-    slider.addEventListener('mousemove', (e) => {
-      if (!isDown) {
-        return
-      }
-      e.preventDefault()
-      const x = e.pageX - slider.offsetLeft
-      const walk = (x - startX) * 3 // scroll-fast
-      slider.scrollLeft = scrollLeft - walk
-    })
-  },
   components: { ModalDetail },
   methods: {
     closeModal () {
@@ -193,13 +159,11 @@ export default {
         buttonZoom.classList.remove('zoom')
         buttonDetail.classList.remove('zoom')
         wrapper.scrollTop = (scrollPosition / 2)
-        console.log(scrollPosition)
       } else {
         museum.classList.add('zoom')
         buttonZoom.classList.add('zoom')
         buttonDetail.classList.add('zoom')
         wrapper.scrollTop = (scrollPosition * 2)
-        console.log(scrollPosition)
       }
     }
   }

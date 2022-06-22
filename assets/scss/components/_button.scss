@@ -123,5 +123,13 @@
     &:hover {
       transform: scale(1);
     }
+
+    &.--first {
+      left: 70.5%;
+    }
   }
+}
+
+button:active, button:focus {
+  border: none;
 }

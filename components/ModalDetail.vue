@@ -21,13 +21,14 @@
       </section>
 
       <div class="modal-footer">
-        <a href="#" @click="closeModal()">
-          Acheter un billet
-          <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- <a href="#" @click="closeModal()" class="btn-line">
+          Acheter un billet -->
+          <!-- <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.97998 1.29272H11.4545V11.7673" stroke="#191919"/>
             <line x1="0.782189" y1="11.9907" x2="11.1012" y2="1.67172" stroke="#191919"/>
-          </svg>
-        </a>
+          </svg> -->
+        <!-- </a> -->
+        <button class="btn-line ml-auto" @click="closeModal">Acheter un billet</button>
       </div>
     </div>
   </div>

@@ -193,6 +193,13 @@ body {
 .btn__zoom.zoom:hover {
   transform: scale(1);
 }
+.btn__zoom.zoom.--first {
+  left: 70.5%;
+}
+
+button:active, button:focus {
+  border: none;
+}
 
 .intro {
   display: flex;
@@ -245,7 +252,7 @@ body {
   background-color: #fff;
   border-radius: 50%;
   border: none;
-  box-shadow: 0 4px 4px 0 #6B5353;
+  box-shadow: 0 4px 4px 0 rgba(107, 83, 83, 0.1254901961);
   cursor: pointer;
 }
 .modal .modal-content {
@@ -260,6 +267,7 @@ body {
   display: flex;
 }
 .modal .modal-footer a {
+  margin-left: auto;
   display: flex;
   text-transform: uppercase;
   font-size: 1.4rem;
@@ -287,7 +295,6 @@ body {
   position: absolute;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  scroll-behavior: smooth;
 }
 
 .museum {
@@ -396,6 +403,10 @@ body {
   display: block;
   width: 17rem;
   height: 8.5rem;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 ::-webkit-scrollbar {
