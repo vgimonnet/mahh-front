@@ -1,6 +1,6 @@
 <template>
   <section class="outer-wrapper">
-    <div class="museum">
+    <div ref="museum" class="museum">
       <div class="museum__slide --one">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-1.png" alt="">
         <a class="museum__logo" href="/">
@@ -12,9 +12,9 @@
           <a class="enter-btn btn --big" href="#two">Entrez</a>
           <p class="credits">Créé par<br/><u>observatoire des politique du handicap</u></p>
         </div>
-        <button class="sound-btn"></button>
+        <Player />
         <div class="btn-wrapper">
-          <button class="guide-btn btn">Visite guidée</button>
+          <button @click="scrollToEnd" class="guide-btn btn">Visite guidée</button>
           <NuxtLink class="accessibility-btn btn" to="/accessibilite">Accessibilité</NuxtLink>
         </div>
       </div>
@@ -374,6 +374,16 @@ export default {
         museum.classList.add('zoom')
         wrapper.scrollTop = (scrollPosition * 2)
       }
+    }
+  },
+  methods: {
+    scrollToEnd () {
+      /* setInterval(() => {
+        document.querySelector('.outer-wrapper').scrollBy({
+          behavior: 'smooth',
+          top: 10
+        })
+      }, 150) */
     }
   }
 }

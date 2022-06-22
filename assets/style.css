@@ -671,6 +671,11 @@ button:active, button:focus {
 }
 
 .--two .timeline {
+  position: absolute;
+  left: 5rem;
+  bottom: 5rem;
+}
+.--two .timeline input {
   display: none;
 }
 
