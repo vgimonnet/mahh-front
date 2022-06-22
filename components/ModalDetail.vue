@@ -38,7 +38,12 @@
 
 const positions = {
   0: 'top: 200%',
-  1: 'top: 336%'
+  1: 'top: 336%',
+  2: 'top: 450%',
+  3: 'top: 500%',
+  4: 'top: 565%',
+  5: 'top: 645%',
+  6: 'top: 690%'
 }
 
 export default {

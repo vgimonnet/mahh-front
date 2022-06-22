@@ -164,6 +164,31 @@ body {
   top: 53%;
   left: 18%;
 }
+.btn__detail.--third {
+  position: absolute;
+  top: 53%;
+  left: 3%;
+}
+.btn__detail.--fourth {
+  position: absolute;
+  top: 53%;
+  left: 86.5%;
+}
+.btn__detail.--fifth {
+  position: absolute;
+  top: 53%;
+  left: 31.3%;
+}
+.btn__detail.--sixth {
+  position: absolute;
+  top: 53%;
+  left: 25%;
+}
+.btn__detail.--seventh {
+  position: absolute;
+  top: 53%;
+  left: 77.3%;
+}
 .btn__detail:hover {
   transform: rotate(180deg);
 }
@@ -191,6 +216,31 @@ body {
   top: 61%;
   left: 18.65%;
 }
+.btn__zoom.--third {
+  position: absolute;
+  top: 61%;
+  left: 3.65%;
+}
+.btn__zoom.--fourth {
+  position: absolute;
+  top: 61%;
+  left: 87.2%;
+}
+.btn__zoom.--fifth {
+  position: absolute;
+  top: 61%;
+  left: 31.9%;
+}
+.btn__zoom.--sixth {
+  position: absolute;
+  top: 61%;
+  left: 25.7%;
+}
+.btn__zoom.--seventh {
+  position: absolute;
+  top: 61%;
+  left: 77.9%;
+}
 .btn__zoom:hover {
   transform: scale(1.4);
 }
@@ -206,6 +256,21 @@ body {
 }
 .zoom .btn__zoom.--second {
   left: 19.15% !important;
+}
+.zoom .btn__zoom.--third {
+  left: 4.15% !important;
+}
+.zoom .btn__zoom.--fourth {
+  left: 87.8% !important;
+}
+.zoom .btn__zoom.--fifth {
+  left: 32.5% !important;
+}
+.zoom .btn__zoom.--sixth {
+  left: 26.2% !important;
+}
+.zoom .btn__zoom.--seventh {
+  left: 78.5% !important;
 }
 .zoom .btn__detail {
   visibility: hidden !important;
@@ -391,13 +456,19 @@ button:active, button:focus {
 .museum.zoom .museum__slide.--three {
   margin-top: -23rem;
 }
-.museum.zoom .museum__slide.--four, .museum.zoom .museum__slide.--five {
+.museum.zoom .museum__slide.--four, .museum.zoom .museum__slide.--five, .museum.zoom .museum__slide.--six, .museum.zoom .museum__slide.--seven, .museum.zoom .museum__slide.--height, .museum.zoom .museum__slide.--nine {
   margin-top: -23rem;
 }
 .museum .anchor {
   width: 10px;
   height: 10px;
   position: absolute;
+}
+.museum .anchor.zoom-in {
+  background-color: red;
+}
+.museum .anchor.zoom-out {
+  background-color: blue;
 }
 .museum .anchor.--first.zoom-in {
   left: 23.5%;
@@ -413,6 +484,46 @@ button:active, button:focus {
 }
 .museum .anchor.--second.zoom-out {
   left: -55.5%;
+  top: 0%;
+}
+.museum .anchor.--third.zoom-in {
+  left: -33.5%;
+  top: 0%;
+}
+.museum .anchor.--third.zoom-out {
+  left: -60.5%;
+  top: 0%;
+}
+.museum .anchor.--fourth.zoom-in {
+  left: 51.5%;
+  top: 0%;
+}
+.museum .anchor.--fourth.zoom-out {
+  left: 25.5%;
+  top: 0%;
+}
+.museum .anchor.--fifth.zoom-in {
+  left: -5.5%;
+  top: 0%;
+}
+.museum .anchor.--fifth.zoom-out {
+  left: -28.5%;
+  top: 0%;
+}
+.museum .anchor.--sixth.zoom-in {
+  left: -10.5%;
+  top: 0%;
+}
+.museum .anchor.--sixth.zoom-out {
+  left: -40.5%;
+  top: 0%;
+}
+.museum .anchor.--seventh.zoom-in {
+  left: 39.5%;
+  top: 0%;
+}
+.museum .anchor.--seventh.zoom-out {
+  left: 8.5%;
   top: 0%;
 }
 .museum .content {
