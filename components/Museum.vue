@@ -8,6 +8,9 @@
       <button @click="scrollToEnd" class="guide-btn btn">Visite guidée</button>
       <NuxtLink class="accessibility-btn btn" to="/accessibilite">Accessibilité</NuxtLink>
     </div>
+    <a href="#" class="billeterie-btn btn">
+      Billeterie
+    </a>
     <section class="outer-wrapper">
       <div ref="museum" class="museum">
         <div class="museum__slide --one">

@@ -901,6 +901,51 @@ button:active, button:focus {
   bottom: 5rem;
 }
 
+.billeterie-btn {
+  font-weight: 600;
+  padding: 2rem 6rem;
+  position: absolute;
+  right: 0;
+  top: 5rem;
+  transition: text-decoration 0.5s ease;
+}
+.billeterie-btn:hover {
+  text-decoration: underline;
+}
+
+.accessibility-btn {
+  background-color: transparent;
+  color: #191919;
+  transition: all 0.5s;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.accessibility-btn:hover {
+  text-decoration: underline;
+}
+
+.guide-btn {
+  margin-right: 1.8rem;
+  background: transparent;
+  border-color: transparent;
+  color: #191919;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "Manrope";
+}
+.guide-btn::before {
+  content: "";
+  background-image: url("@/assets/union.svg");
+  background-size: cover;
+  display: inline-block;
+  margin-right: 0.7rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 0.1rem;
+}
+
 .zoom-modal {
   -webkit-mask-image: url("@/assets/mask.svg");
   mask-image: url("@/assets/mask.svg");
@@ -998,38 +1043,6 @@ button:active, button:focus {
 }
 .--one .enter-btn:hover {
   text-decoration: underline;
-}
-
-.accessibility-btn {
-  background-color: #191919;
-  color: #EDE9E3;
-  transition: all 0.5s;
-}
-.accessibility-btn:hover {
-  text-decoration: underline;
-}
-
-.guide-btn {
-  margin-right: 1.8rem;
-}
-.guide-btn::before {
-  content: "";
-  background-image: url("@/assets/union.svg");
-  background-size: cover;
-  display: inline-block;
-  margin-right: 0.7rem;
-  width: 1.3rem;
-  height: 1.3rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-top: 0.1rem;
-}
-.guide-btn.--active::before, .guide-btn:hover::before {
-  animation-name: guide-btn;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  transition: opacity ease 0.2s;
 }
 
 .--two .timeline {
