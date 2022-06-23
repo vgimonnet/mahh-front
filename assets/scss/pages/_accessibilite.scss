@@ -10,7 +10,7 @@ main#accessibilite {
     position: relative;
     width: fit-content;
     margin: 0 auto 5rem auto;
-    padding-top: 9rem;
+    padding-top: 11rem;
     &::after {
       content: '';
       position: absolute;
@@ -55,7 +55,7 @@ main#accessibilite {
   }
 
   header {
-    height: 7rem;
+    height: 9rem;
     padding: .5rem 1rem;
     display: flex;
     align-items: center;
@@ -66,7 +66,7 @@ main#accessibilite {
     border-bottom: .2rem solid $brown;
 
     img {
-      max-height: 5rem;
+      max-height: 7rem;
     }
 
     nav {
