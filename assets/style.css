@@ -586,10 +586,8 @@ button:active, button:focus {
   background: rgba(252, 249, 244, 0.9411764706);
   overflow: auto;
   cursor: default;
-  transform: rotate(90deg);
   padding: 5rem;
-  max-width: 50%;
-  max-height: 35%;
+  width: 60rem;
   opacity: 0;
   transition: opacity 1s ease;
   pointer-events: none;
@@ -684,6 +682,7 @@ button:active, button:focus {
 }
 
 .museum {
+  position: relative;
   display: flex;
   flex-direction: row;
   width: fit-content;

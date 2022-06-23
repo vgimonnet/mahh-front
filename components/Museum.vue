@@ -324,9 +324,9 @@
       <div id="nine" class="museum__slide --nine">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-9.png" alt="">
       </div>
+      <ModalDetail :data="oeuvre" :showModal="showModal" :index="indexOeuvre" @close-modal="closeModal" />
     </div>
 
-    <ModalDetail :data="oeuvre" :showModal="showModal" :index="indexOeuvre" @close-modal="closeModal" />
   </section>
 </template>
 

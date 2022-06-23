@@ -12,6 +12,7 @@
 }
 
 .museum {
+  position: relative;
   $m: &;
   display: flex;
   flex-direction: row;
