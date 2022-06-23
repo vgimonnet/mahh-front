@@ -26,7 +26,7 @@
         </audio>
       </div>
     </section>
-    <footer>Footer</footer>
+    <!-- <footer>Footer</footer> -->
   </main>
 </template>
 
