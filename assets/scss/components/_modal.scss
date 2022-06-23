@@ -24,10 +24,10 @@
     background: $modal-bg;
     overflow: auto;
     cursor: default;
-    transform: rotate(90deg);
+    // transform: rotate(90deg);
     padding: 5rem;
-    max-width: 50%;
-    max-height: 35%;
+    width: 60rem;
+    // max-height: 35%;
     opacity: 0;
     transition: opacity 1s ease;
     pointer-events: none;

@@ -37,13 +37,13 @@
 <script>
 
 const positions = {
-  0: 'top: 259%',
-  1: 'top: 402.5%',
-  2: 'top: 485%',
-  3: 'top: 511%',
-  4: 'top: 604%',
-  5: 'top: 637%',
-  6: 'top: 736%'
+  0: 'left: 31.5%',
+  1: 'left: 49%',
+  2: 'left: 59%',
+  3: 'left: 61.5%',
+  4: 'left: 74%',
+  5: 'left: 76.7%',
+  6: 'left: 90%'
 }
 
 export default {
