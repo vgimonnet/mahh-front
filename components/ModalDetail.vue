@@ -31,6 +31,12 @@
           <button class="btn-line ml-auto" @click="closeModal">Acheter un billet</button>
         </div>
       </div>
+
+      <div style="display: none;">
+        <audio ref="audio">
+          <source src="/enregistrement_oeuvre.mp3" type="audio/mpeg">
+        </audio>
+      </div>
   </div>
 </template>
 
@@ -80,7 +86,12 @@ export default {
         // this.show = 'show'
         document.querySelector('.modal').classList.add('show')
         document.querySelector('.modal-dialog').classList.add('show')
+        setTimeout(() => {
+          this.$refs.audio.play()
+          this.$refs.audio.volume = 1
+        }, 2000)
       } else {
+        this.$refs.audio.pause()
         document.querySelector('.modal').classList.remove('show')
         document.querySelector('.modal-dialog').classList.remove('show')
         // this.show = ''

@@ -22,7 +22,7 @@ export default {
         console.log('play')
         this.$refs.audio.play()
         this.$refs.soundBtn.classList.add('--active')
-        this.$refs.audio.volume = 1
+        this.$refs.audio.volume = 0.2
       } else {
         console.log('pause')
         this.$refs.audio.pause()

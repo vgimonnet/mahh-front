@@ -21,7 +21,7 @@
         <h3>{{ oeuvre.title }}</h3>
         <p>{{ oeuvre.content }}</p>
         <audio controls>
-          <source src="/jazzy.mp3" type="audio/mpeg">
+          <source src="/enregistrement_oeuvre.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
       </div>
