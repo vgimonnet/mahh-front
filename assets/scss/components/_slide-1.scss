@@ -62,6 +62,18 @@
     }
   }
 
+  .billeterie-btn {
+    font-weight: 600;
+    padding: 2rem 6rem;
+    position: absolute;
+    right: 0;
+    top: 5rem;
+    transition: text-decoration .5s ease;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .sound-btn {
     display: inline-block;
     width: 6rem;
@@ -86,14 +98,16 @@
 
   .btn-wrapper {
     position: absolute;
-    right: 5rem;
-    bottom: 5rem;
+    right: 0;
+    bottom: 4rem;
   }
 
   .accessibility-btn {
-    background-color: $black;
-    color: $light;
+    background-color: transparent;
+    color: $black;
     transition: all .5s;
+    font-size: 1.6rem;
+    font-weight: 600;
     &:hover {
       text-decoration: underline;
     }
@@ -101,6 +115,12 @@
 
   .guide-btn {
     margin-right: 1.8rem;
+    background: transparent;
+    border-color: transparent;
+    color: $black;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: 'Manrope';
 
     &::before {
       content: '';
@@ -117,7 +137,7 @@
     }
 
     &.--active, &:hover {
-
+      text-decoration: underline;
       &::before {
         // opacity: 1;
         animation-name: guide-btn;

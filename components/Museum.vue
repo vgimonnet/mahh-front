@@ -6,6 +6,9 @@
         <a class="museum__logo" href="/">
           <img loading="lazy" src="@/assets/logo.svg" alt="">
         </a>
+        <a href="#" class="billeterie-btn btn">
+          Billeterie
+        </a>
         <div class="content">
           <!-- <h1 class="title">le voyage<br/>au-delà des normes</h1> -->
           <!-- <p class="desc">Bienvenue dans l’exposition interactive sur le handicap. Là où le handicap est une force.</p> -->

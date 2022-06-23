@@ -968,6 +968,17 @@ button:active, button:focus {
 .--one .enter-btn:hover {
   text-decoration: underline;
 }
+.--one .billeterie-btn {
+  font-weight: 600;
+  padding: 2rem 6rem;
+  position: absolute;
+  right: 0;
+  top: 5rem;
+  transition: text-decoration 0.5s ease;
+}
+.--one .billeterie-btn:hover {
+  text-decoration: underline;
+}
 .--one .sound-btn {
   display: inline-block;
   width: 6rem;
@@ -990,19 +1001,27 @@ button:active, button:focus {
 }
 .--one .btn-wrapper {
   position: absolute;
-  right: 5rem;
-  bottom: 5rem;
+  right: 0;
+  bottom: 4rem;
 }
 .--one .accessibility-btn {
-  background-color: #191919;
-  color: #EDE9E3;
+  background-color: transparent;
+  color: #191919;
   transition: all 0.5s;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 .--one .accessibility-btn:hover {
   text-decoration: underline;
 }
 .--one .guide-btn {
   margin-right: 1.8rem;
+  background: transparent;
+  border-color: transparent;
+  color: #191919;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "Manrope";
 }
 .--one .guide-btn::before {
   content: "";
@@ -1015,6 +1034,9 @@ button:active, button:focus {
   background-position: center;
   background-repeat: no-repeat;
   margin-top: 0.1rem;
+}
+.--one .guide-btn.--active, .--one .guide-btn:hover {
+  text-decoration: underline;
 }
 .--one .guide-btn.--active::before, .--one .guide-btn:hover::before {
   animation-name: guide-btn;
