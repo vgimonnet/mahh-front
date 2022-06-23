@@ -92,6 +92,7 @@ body {
 }
 body.accessibilite {
   overflow: auto;
+  font-size: 2.6rem;
 }
 
 .btn {
@@ -634,7 +635,7 @@ button:active, button:focus {
   height: 6rem;
   background-color: #fff;
   color: #191919;
-  background-image: url("@/assets/mute.svg");
+  background-image: url("@/assets/sound.svg");
   background-size: 3rem 2.7rem;
   background-position: center;
   background-repeat: no-repeat;
@@ -646,7 +647,7 @@ button:active, button:focus {
   bottom: 5rem;
 }
 .--one .sound-btn.--active, .--one .sound-btn:hover {
-  background-image: url("@/assets/sound.svg");
+  background-image: url("@/assets/mute.svg");
 }
 .--one .btn-wrapper {
   position: absolute;
@@ -713,7 +714,7 @@ main#accessibilite h1 {
   position: relative;
   width: fit-content;
   margin: 0 auto 5rem auto;
-  padding-top: 9rem;
+  padding-top: 11rem;
 }
 main#accessibilite h1::after {
   content: "";
@@ -754,7 +755,7 @@ main#accessibilite section img {
   max-width: 25%;
 }
 main#accessibilite header {
-  height: 7rem;
+  height: 9rem;
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
@@ -765,7 +766,7 @@ main#accessibilite header {
   border-bottom: 0.2rem solid #AD8665;
 }
 main#accessibilite header img {
-  max-height: 5rem;
+  max-height: 7rem;
 }
 main#accessibilite header nav {
   width: fill-available;
