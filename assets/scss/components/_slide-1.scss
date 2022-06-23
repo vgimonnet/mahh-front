@@ -3,7 +3,7 @@
 
   .content {
     left: 50%;
-    top: 81%;
+    top: 75%;
     transform: translate(-50%, -50%);
     width: 50rem;
     text-align: center;
@@ -30,7 +30,7 @@
     text-transform: uppercase;
     text-align: center;
     opacity: 0.4;
-    margin-top: 14rem;
+    margin-top: 22rem;
     a {
       color: #000;
       transition: opacity .5s ease;
@@ -56,6 +56,7 @@
     text-transform: uppercase;
     font-family: 1.8rem;
     transition: all .5s ease;
+    cursor: pointer;
     &:hover {
       text-decoration: underline;
     }
@@ -67,7 +68,7 @@
     height: 6rem;
     background-color: $white;
     color: $black;
-    background-image: url('@/assets/mute.svg');
+    background-image: url('@/assets/sound.svg');
     background-size: 3rem 2.7rem;
     background-position: center;
     background-repeat: no-repeat;
@@ -79,7 +80,7 @@
     bottom: 5rem;
 
     &.--active, &:hover {
-      background-image: url('@/assets/sound.svg');
+    background-image: url('@/assets/mute.svg');
     }
   }
 
