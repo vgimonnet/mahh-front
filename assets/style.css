@@ -833,17 +833,6 @@ button:active, button:focus {
 .museum .content {
   position: absolute;
 }
-.museum__logo {
-  position: absolute;
-  display: inline-block;
-  left: 5rem;
-  top: 5rem;
-}
-.museum__logo img {
-  display: block;
-  width: 17rem;
-  height: 8.5rem;
-}
 
 .ml-auto {
   margin-left: auto;
@@ -870,6 +859,48 @@ button:active, button:focus {
     -webkit-transform: rotate(360deg);
   }
 }
+.logo {
+  position: fixed;
+  display: inline-block;
+  left: 5rem;
+  top: 5rem;
+  z-index: 5;
+}
+.logo img {
+  display: block;
+  width: 17rem;
+  height: 8.5rem;
+}
+
+.sound-btn {
+  z-index: 5;
+  position: fixed;
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  background-color: #fff;
+  color: #191919;
+  background-image: url("@/assets/sound.svg");
+  background-size: 3rem 2.7rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  left: 5rem;
+  bottom: 5rem;
+}
+.sound-btn.--active, .sound-btn:hover {
+  background-image: url("@/assets/mute.svg");
+}
+
+.btn-wrapper {
+  position: fixed;
+  z-index: 5;
+  right: 5rem;
+  bottom: 5rem;
+}
+
 .zoom-modal {
   -webkit-mask-image: url("@/assets/mask.svg");
   mask-image: url("@/assets/mask.svg");
@@ -968,43 +999,20 @@ button:active, button:focus {
 .--one .enter-btn:hover {
   text-decoration: underline;
 }
-.--one .sound-btn {
-  display: inline-block;
-  width: 6rem;
-  height: 6rem;
-  background-color: #fff;
-  color: #191919;
-  background-image: url("@/assets/sound.svg");
-  background-size: 3rem 2.7rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  border: 0;
-  cursor: pointer;
-  position: absolute;
-  left: 5rem;
-  bottom: 5rem;
-}
-.--one .sound-btn.--active, .--one .sound-btn:hover {
-  background-image: url("@/assets/mute.svg");
-}
-.--one .btn-wrapper {
-  position: absolute;
-  right: 5rem;
-  bottom: 5rem;
-}
-.--one .accessibility-btn {
+
+.accessibility-btn {
   background-color: #191919;
   color: #EDE9E3;
   transition: all 0.5s;
 }
-.--one .accessibility-btn:hover {
+.accessibility-btn:hover {
   text-decoration: underline;
 }
-.--one .guide-btn {
+
+.guide-btn {
   margin-right: 1.8rem;
 }
-.--one .guide-btn::before {
+.guide-btn::before {
   content: "";
   background-image: url("@/assets/union.svg");
   background-size: cover;
@@ -1016,7 +1024,7 @@ button:active, button:focus {
   background-repeat: no-repeat;
   margin-top: 0.1rem;
 }
-.--one .guide-btn.--active::before, .--one .guide-btn:hover::before {
+.guide-btn.--active::before, .guide-btn:hover::before {
   animation-name: guide-btn;
   animation-duration: 4s;
   animation-iteration-count: infinite;

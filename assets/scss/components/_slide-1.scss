@@ -61,71 +61,43 @@
       text-decoration: underline;
     }
   }
+}
 
-  .sound-btn {
+.accessibility-btn {
+  background-color: $black;
+  color: $light;
+  transition: all .5s;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.guide-btn {
+  margin-right: 1.8rem;
+
+  &::before {
+    content: '';
+    background-image: url('@/assets/union.svg');
+    background-size: cover;
     display: inline-block;
-    width: 6rem;
-    height: 6rem;
-    background-color: $white;
-    color: $black;
-    background-image: url('@/assets/sound.svg');
-    background-size: 3rem 2.7rem;
+    margin-right: 0.7rem;
+    width: 1.3rem;
+    height: 1.3rem;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 50%;
-    border: 0;
-    cursor: pointer;
-    position: absolute;
-    left: 5rem;
-    bottom: 5rem;
-
-    &.--active, &:hover {
-    background-image: url('@/assets/mute.svg');
-    }
+    margin-top: .1rem;
+    // opacity: 0;
   }
 
-  .btn-wrapper {
-    position: absolute;
-    right: 5rem;
-    bottom: 5rem;
-  }
-
-  .accessibility-btn {
-    background-color: $black;
-    color: $light;
-    transition: all .5s;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .guide-btn {
-    margin-right: 1.8rem;
+  &.--active, &:hover {
 
     &::before {
-      content: '';
-      background-image: url('@/assets/union.svg');
-      background-size: cover;
-      display: inline-block;
-      margin-right: 0.7rem;
-      width: 1.3rem;
-      height: 1.3rem;
-      background-position: center;
-      background-repeat: no-repeat;
-      margin-top: .1rem;
-      // opacity: 0;
-    }
-
-    &.--active, &:hover {
-
-      &::before {
-        // opacity: 1;
-        animation-name: guide-btn;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        transition: opacity ease 0.2s;
-      }
+      // opacity: 1;
+      animation-name: guide-btn;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      transition: opacity ease 0.2s;
     }
   }
 }
