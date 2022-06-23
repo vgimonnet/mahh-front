@@ -34,13 +34,14 @@
       <div id="three" class="museum__slide --three">
         <img class="museum__pic" src="@/assets/slide-3.png" alt="">
 
-        <span class="anchor --first zoom-in"></span>
-        <span class="anchor --first zoom-out"></span>
+        <div id="zoom-modal-0" class="zoom-modal --first">
+          <img src="@/assets/zoom-0.png" alt="">
+        </div>
 
         <button aria-label="Voir plus de détail" @click="showDetail(0)" class="btn__detail --first">
           <img src="@/assets/plus.svg" alt="Afficher plus de détail">
         </button>
-        <button aria-label="Aggrandir l'oeuvre" @click="zoom($event)" class="btn__zoom --first">
+        <button aria-label="Aggrandir l'oeuvre" @click="zoom(0)" class="btn__zoom --first">
           <svg
             width="19"
             height="19"
@@ -85,13 +86,14 @@
       <div id="five" class="museum__slide --five">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-5.png" alt="">
 
-        <span class="anchor --second zoom-in"></span>
-        <span class="anchor --second zoom-out"></span>
+        <div id="zoom-modal-1" class="zoom-modal --second">
+          <img src="@/assets/zoom-1.png" alt="">
+        </div>
 
         <button aria-label="Voir plus de détail" @click="showDetail(1)" class="btn__detail --second">
           <img src="@/assets/plus.svg" alt="Afficher plus de détail">
         </button>
-        <button aria-label="Aggrandir l'oeuvre" @click="zoom($event)" class="btn__zoom --second">
+        <button aria-label="Aggrandir l'oeuvre" @click="zoom(1)" class="btn__zoom --second">
           <svg
             width="19"
             height="19"
@@ -128,13 +130,14 @@
       <div id="six" class="museum__slide --six">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-6.png" alt="">
 
-        <span class="anchor --third zoom-in"></span>
-        <span class="anchor --third zoom-out"></span>
+        <div id="zoom-modal-2" class="zoom-modal --third">
+          <img src="@/assets/zoom-2.png" alt="">
+        </div>
 
         <button aria-label="Voir plus de détail" @click="showDetail(2)" class="btn__detail --third">
           <img src="@/assets/plus.svg" alt="Afficher plus de détail">
         </button>
-        <button aria-label="Aggrandir l'oeuvre" @click="zoom($event)" class="btn__zoom --third">
+        <button aria-label="Aggrandir l'oeuvre" @click="zoom(2)" class="btn__zoom --third">
           <svg
             width="19"
             height="19"
@@ -164,13 +167,14 @@
           </svg>
         </button>
 
-        <span class="anchor --fourth zoom-in"></span>
-        <span class="anchor --fourth zoom-out"></span>
+        <div id="zoom-modal-3" class="zoom-modal --fourth">
+          <img src="@/assets/zoom-3.png" alt="">
+        </div>
 
         <button aria-label="Voir plus de détail" @click="showDetail(3)" class="btn__detail --fourth">
           <img src="@/assets/plus.svg" alt="Afficher plus de détail">
         </button>
-        <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, 1)" class="btn__zoom --fourth">
+        <button aria-label="Aggrandir l'oeuvre" @click="zoom(3)" class="btn__zoom --fourth">
           <svg
             width="19"
             height="19"
@@ -203,13 +207,14 @@
       <div id="seven" class="museum__slide --seven">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-7.png" alt="">
 
-        <span class="anchor --fifth zoom-in"></span>
-        <span class="anchor --fifth zoom-out"></span>
+        <div id="zoom-modal-4" class="zoom-modal --fifth">
+          <img src="@/assets/zoom-4.png" alt="">
+        </div>
 
         <button aria-label="Voir plus de détail" @click="showDetail(4)" class="btn__detail --fifth">
           <img src="@/assets/plus.svg" alt="Afficher plus de détail">
         </button>
-        <button aria-label="Aggrandir l'oeuvre" @click="zoom($event)" class="btn__zoom --fifth">
+        <button aria-label="Aggrandir l'oeuvre" @click="zoom(4)" class="btn__zoom --fifth">
           <svg
             width="19"
             height="19"
@@ -242,13 +247,14 @@
       <div id="height" class="museum__slide --height">
         <img loading="lazy" class="museum__pic" src="@/assets/slide-8.png" alt="">
 
-        <span class="anchor --sixth zoom-in"></span>
-        <span class="anchor --sixth zoom-out"></span>
+        <div id="zoom-modal-5" class="zoom-modal --sixth">
+          <img src="@/assets/zoom-5.png" alt="">
+        </div>
 
         <button aria-label="Voir plus de détail" @click="showDetail(5)" class="btn__detail --sixth">
           <img src="@/assets/plus.svg" alt="Afficher plus de détail">
         </button>
-        <button aria-label="Aggrandir l'oeuvre" @click="zoom($event)" class="btn__zoom --sixth">
+        <button aria-label="Aggrandir l'oeuvre" @click="zoom(5)" class="btn__zoom --sixth">
           <svg
             width="19"
             height="19"
@@ -278,13 +284,14 @@
           </svg>
         </button>
 
-        <span class="anchor --seventh zoom-in"></span>
-        <span class="anchor --seventh zoom-out"></span>
+        <div id="zoom-modal-6" class="zoom-modal --seventh">
+          <img src="@/assets/zoom-6.png" alt="">
+        </div>
 
         <button aria-label="Voir plus de détail" @click="showDetail(6)" class="btn__detail --seventh">
           <img src="@/assets/plus.svg" alt="Afficher plus de détail">
         </button>
-        <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, 1)" class="btn__zoom --seventh">
+        <button aria-label="Aggrandir l'oeuvre" @click="zoom(6)" class="btn__zoom --seventh">
           <svg
             width="19"
             height="19"
@@ -328,6 +335,7 @@ import oeuvres from '../data/oeuvres.json'
 import ModalDetail from './ModalDetail.vue'
 export default {
   name: 'MuseumComponent',
+  components: { ModalDetail },
   data () {
     return {
       timeline: 0,
@@ -342,7 +350,6 @@ export default {
       indexOeuvre: 0
     }
   },
-  components: { ModalDetail },
   methods: {
     closeModal () {
       this.showModal = false
@@ -352,50 +359,52 @@ export default {
       this.oeuvre = this.oeuvres[index]
       this.showModal = !this.showModal
     },
-    zoom (event, idAnchor = 0) {
+    zoom (idAnchor = 0) {
       this.zoomActif = !this.zoomActif
       this.showModal = false
-      const museum = document.querySelector('.museum')
-
-      let anchorClassName = '.zoom-out'
-      if (this.zoomActif) {
-        anchorClassName = '.zoom-in'
-      }
-      const anchor = event.currentTarget.parentElement.querySelectorAll(anchorClassName)[idAnchor]
-
       const wrapper = document.querySelector('.outer-wrapper')
-
-      const scrollPosition = event.currentTarget.parentElement.offsetLeft + anchor.offsetLeft
-      console.log(scrollPosition, '')
-
-      if (museum.classList.contains('zoom')) {
-        museum.classList.remove('zoom')
-        wrapper.scrollTop = (scrollPosition / 2)
+      const modal = document.querySelector(`#zoom-modal-${idAnchor}`)
+      if (this.zoomActif) {
+        modal.scrollIntoView()
+        wrapper.style.overflow = 'hidden'
+        modal.classList.add('--active')
+        setTimeout(() => {
+          modal.scrollIntoView()
+        }, 1000)
       } else {
-        museum.classList.add('zoom')
-        wrapper.scrollTop = (scrollPosition * 2)
+        wrapper.style.overflow = null
+        modal.classList.remove('--active')
       }
     },
     scrollToEnd () {
       document.querySelector('#two').scrollIntoView()
       setTimeout(() => {
-        document.querySelector('#three').scrollIntoView()
+        document.querySelector('#zoom-modal-0').scrollIntoView()
       }, 2000)
       setTimeout(() => {
         document.querySelector('#four').scrollIntoView()
       }, 4000)
       setTimeout(() => {
-        document.querySelector('#five').scrollIntoView()
+        document.querySelector('#zoom-modal-1').scrollIntoView()
       }, 6000)
       setTimeout(() => {
-        document.querySelector('#six').scrollIntoView()
+        document.querySelector('#zoom-modal-2').scrollIntoView()
       }, 8000)
       setTimeout(() => {
-        document.querySelector('#seven').scrollIntoView()
+        document.querySelector('#zoom-modal-3').scrollIntoView()
       }, 10000)
       setTimeout(() => {
-        document.querySelector('#height').scrollIntoView()
+        document.querySelector('#zoom-modal-4').scrollIntoView()
       }, 12000)
+      setTimeout(() => {
+        document.querySelector('#zoom-modal-5').scrollIntoView()
+      }, 14000)
+      setTimeout(() => {
+        document.querySelector('#zoom-modal-6').scrollIntoView()
+      }, 16000)
+      setTimeout(() => {
+        document.querySelector('#zoom-modal-7').scrollIntoView()
+      }, 16000)
     },
     scrollToStart () {
       document.querySelector('#two').scrollIntoView({

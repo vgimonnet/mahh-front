@@ -211,6 +211,7 @@ body.accessibilite {
   height: fit-content;
   box-shadow: -1px 2px 2px 0 rgba(0, 0, 0, 0.12);
   transition: transform 0.5s ease;
+  z-index: 3;
 }
 .btn__zoom svg {
   width: 1rem;
@@ -579,6 +580,55 @@ button:active, button:focus {
     -webkit-transform: rotate(360deg);
   }
 }
+.zoom-modal {
+  -webkit-mask-image: url("@/assets/mask.svg");
+  mask-image: url("@/assets/mask.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  transition: all ease-in-out 1.5s;
+  pointer-events: none;
+  top: 45%;
+}
+.zoom-modal img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.zoom-modal.--first {
+  left: 50%;
+}
+.zoom-modal.--second {
+  left: 0;
+}
+.zoom-modal.--third {
+  left: -4.5%;
+}
+.zoom-modal.--fourth {
+  left: 79%;
+}
+.zoom-modal.--fifth {
+  left: 23%;
+}
+.zoom-modal.--sixth {
+  left: 17.5%;
+}
+.zoom-modal.--seventh {
+  left: 70%;
+}
+.zoom-modal.--active {
+  top: 50%;
+  mask-size: 120%;
+  pointer-events: all;
+}
+
 .--one .content {
   left: 50%;
   top: 81%;
