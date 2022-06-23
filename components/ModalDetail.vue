@@ -78,8 +78,10 @@ export default {
     showModal (val) {
       if (val) {
         // this.show = 'show'
+        document.querySelector('.modal').classList.add('show')
         document.querySelector('.modal-dialog').classList.add('show')
       } else {
+        document.querySelector('.modal').classList.remove('show')
         document.querySelector('.modal-dialog').classList.remove('show')
         // this.show = ''
       }
