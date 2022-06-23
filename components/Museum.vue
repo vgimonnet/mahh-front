@@ -388,31 +388,31 @@ export default {
       document.querySelector('#two').scrollIntoView()
       setTimeout(() => {
         document.querySelector('#zoom-modal-0').scrollIntoView()
-      }, 2000)
+      }, 3000)
       setTimeout(() => {
         document.querySelector('#four').scrollIntoView()
-      }, 4000)
-      setTimeout(() => {
-        document.querySelector('#zoom-modal-1').scrollIntoView()
-      }, 6000)
-      setTimeout(() => {
-        document.querySelector('#zoom-modal-2').scrollIntoView()
-      }, 8000)
-      setTimeout(() => {
-        document.querySelector('#zoom-modal-3').scrollIntoView()
       }, 10000)
       setTimeout(() => {
+        document.querySelector('#zoom-modal-1').scrollIntoView()
+      }, 15000)
+      setTimeout(() => {
+        document.querySelector('#zoom-modal-2').scrollIntoView()
+      }, 20000)
+      setTimeout(() => {
+        document.querySelector('#zoom-modal-3').scrollIntoView()
+      }, 25000)
+      setTimeout(() => {
         document.querySelector('#zoom-modal-4').scrollIntoView()
-      }, 12000)
+      }, 30000)
       setTimeout(() => {
         document.querySelector('#zoom-modal-5').scrollIntoView()
-      }, 14000)
+      }, 35000)
       setTimeout(() => {
         document.querySelector('#zoom-modal-6').scrollIntoView()
-      }, 16000)
+      }, 40000)
       setTimeout(() => {
         document.querySelector('#zoom-modal-7').scrollIntoView()
-      }, 16000)
+      }, 45000)
     },
     scrollToStart () {
       document.querySelector('#two').scrollIntoView({

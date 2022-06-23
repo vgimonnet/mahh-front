@@ -86,7 +86,7 @@ button {
   &.--first {
     position: absolute;
     top: 53%;
-    left: 69.5%;
+    left: 74%;
   }
 
   &.--second {
@@ -154,7 +154,7 @@ button {
     animation-name: moveFirstBtnZoomOut;
     position: absolute;
     top: 61%;
-    left: 69.85%;
+    left: 74.3%;
   }
 
   &.--second {
@@ -343,7 +343,7 @@ button:active, button:focus {
   50% { opacity: 0; }
   100% { 
     opacity: 1;
-    left: 58%;
+    left: 58.5%;
     top: 74%;
   }
 }
@@ -354,7 +354,7 @@ button:active, button:focus {
   100% { 
     opacity: 1;
     top: 61%;
-    left: 69.85%;
+    left: 74.3%;
   }
 }
 
