@@ -239,4 +239,5 @@ button:active, button:focus {
 
 .__hidden {
   opacity: 0;
+  pointer-events: none;
 }
