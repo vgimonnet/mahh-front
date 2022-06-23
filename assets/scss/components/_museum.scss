@@ -262,8 +262,9 @@
 .billeterie-btn {
   font-weight: 600;
   padding: 2rem 6rem;
-  position: absolute;
-  right: 0;
+  position: fixed;
+  z-index: 5;
+  right: 5rem;
   top: 5rem;
   transition: text-decoration .5s ease;
   &:hover {

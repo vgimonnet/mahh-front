@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a class="logo" href="/">
+    <a class="logo" href="/museum">
       <img loading="lazy" src="@/assets/logo.svg" alt="">
     </a>
     <Player />
