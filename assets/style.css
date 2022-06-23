@@ -1216,6 +1216,10 @@ main#accessibilite header nav {
 main#accessibilite header nav a {
   margin-right: 1rem;
   color: #191919;
+  transition: all 0.5s;
+}
+main#accessibilite header nav a:hover {
+  color: #AD8665;
 }
 main#accessibilite header nav a:last-child {
   margin: 0 0 0 auto;

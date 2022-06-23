@@ -79,6 +79,10 @@ main#accessibilite {
         margin-right: 1rem;
         // text-decoration: none;
         color: $black;
+        transition: all .5s;
+        &:hover {
+          color: $brown;
+        }
         &:last-child {
           margin: 0 0 0 auto;
           background-color: $brown;
