@@ -331,9 +331,11 @@ button:active, button:focus {
   max-height: 35%;
   opacity: 0;
   transition: opacity 1s ease;
+  pointer-events: none;
 }
 .modal .modal-dialog.show {
   opacity: 1;
+  pointer-events: all;
 }
 .modal .modal-header {
   display: flex;
