@@ -2,7 +2,7 @@
   <div>
     <button ref="soundBtn" class="sound-btn" @click="handlePlayer" />
     <audio ref="audio">
-      <source src="/jazzy.mp3" type="audio/mpeg">
+      <source src="/music.mp3" type="audio/mpeg">
     </audio>
   </div>
 </template>
