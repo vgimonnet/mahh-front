@@ -423,8 +423,8 @@ button:active, button:focus {
 }
 .museum__slide.--four a#decouvrir {
   position: absolute;
-  top: 33%;
-  left: 35%;
+  top: 38%;
+  left: 36%;
 }
 .museum__slide.--four a#decouvrir div {
   position: relative;
@@ -623,6 +623,7 @@ button:active, button:focus {
   text-transform: uppercase;
   font-family: 1.8rem;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 .--one .enter-btn:hover {
   text-decoration: underline;
@@ -697,8 +698,8 @@ button:active, button:focus {
 }
 .--five .btn-line-wrapper {
   position: absolute;
-  top: 30%;
-  left: 31.5%;
+  top: 27%;
+  left: 35.5%;
 }
 
 main#accessibilite {

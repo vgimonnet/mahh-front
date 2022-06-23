@@ -56,6 +56,7 @@
     text-transform: uppercase;
     font-family: 1.8rem;
     transition: all .5s ease;
+    cursor: pointer;
     &:hover {
       text-decoration: underline;
     }
