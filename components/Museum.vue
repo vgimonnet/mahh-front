@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Timeline />
     <a class="logo" href="/museum">
       <img loading="lazy" src="@/assets/logo.svg" alt="">
     </a>
@@ -24,16 +25,6 @@
         </div>
         <div id="two" class="museum__slide --two">
           <img loading="lazy" class="museum__pic" src="@/assets/slide-2.png" alt="">
-          <div class="timeline">
-            <input
-              type="range"
-              name=""
-              id="timeline-range"
-              min="0"
-              max="50"
-              :v-model="timeline"
-            >
-          </div>
         </div>
         <div id="three" class="museum__slide --three">
           <img class="museum__pic" src="@/assets/slide-3.png" alt="">
