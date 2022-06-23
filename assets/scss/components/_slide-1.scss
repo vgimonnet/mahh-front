@@ -80,7 +80,7 @@
     height: 6rem;
     background-color: $white;
     color: $black;
-    background-image: url('@/assets/sound.svg');
+    background-image: url('@/assets/mute.svg');
     background-size: 3rem 2.7rem;
     background-position: center;
     background-repeat: no-repeat;
@@ -92,7 +92,7 @@
     bottom: 5rem;
 
     &.--active, &:hover {
-    background-image: url('@/assets/mute.svg');
+    background-image: url('@/assets/sound.svg');
     }
   }
 
