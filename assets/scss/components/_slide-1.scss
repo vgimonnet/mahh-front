@@ -3,25 +3,25 @@
 
   .content {
     left: 50%;
-    top: 50%;
+    top: 81%;
     transform: translate(-50%, -50%);
     width: 50rem;
     text-align: center;
   }
 
-  .title {
-    font-size: 3.8rem;
-    line-height: 1.56;
-    font-weight: 400;
-    margin: 0 0 4rem;
-    text-transform: uppercase;
-    font-family: 'Mabry Pro';
-  }
+  // .title {
+  //   font-size: 3.8rem;
+  //   line-height: 1.56;
+  //   font-weight: 400;
+  //   margin: 0 0 4rem;
+  //   text-transform: uppercase;
+  //   font-family: 'Mabry Pro';
+  // }
 
-  .desc {
-    max-width: 30rem;
-    margin: 3rem auto;
-  }
+  // .desc {
+  //   max-width: 30rem;
+  //   margin: 3rem auto;
+  // }
 
   .credits {
     font-size: 1rem;
@@ -30,7 +30,14 @@
     text-transform: uppercase;
     text-align: center;
     opacity: 0.4;
-    margin-top: 17rem;
+    margin-top: 14rem;
+    a {
+      color: #000;
+      transition: opacity .5s ease;
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   @keyframes guide-btn {
@@ -40,16 +47,17 @@
   }
 
   .enter-btn {
-    background-color: $brown;
-    color: $white;
-    &::after {
-      margin-left: 1.2rem;
-      display: inline-block;
-      content: '';
-      width: 1rem;
-      height: 1rem;
-      background-image: url('@/assets/chevron.png');
-      background-size: cover;
+    background-color: transparent;
+    color: $black;
+    border: .1rem solid $grey;
+    padding: 3.5rem 6rem;
+    border-radius: 50%;
+    font-family: 'Editorial New';
+    text-transform: uppercase;
+    font-family: 1.8rem;
+    transition: all .5s ease;
+    &:hover {
+      text-decoration: underline;
     }
   }
 
@@ -82,7 +90,12 @@
   }
 
   .accessibility-btn {
-    background-color: $light;
+    background-color: $black;
+    color: $light;
+    transition: all .5s;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .guide-btn {
@@ -93,23 +106,24 @@
       background-image: url('@/assets/union.svg');
       background-size: cover;
       display: inline-block;
-      margin-right: 0.5rem;
+      margin-right: 0.7rem;
       width: 1.3rem;
       height: 1.3rem;
       background-position: center;
       background-repeat: no-repeat;
-      opacity: 0;
-      animation-name: guide-btn;
-      animation-duration: 4s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-      transition: opacity ease 0.2s;
+      margin-top: .1rem;
+      // opacity: 0;
     }
 
     &.--active, &:hover {
 
       &::before {
-        opacity: 1;
+        // opacity: 1;
+        animation-name: guide-btn;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        transition: opacity ease 0.2s;
       }
     }
   }
