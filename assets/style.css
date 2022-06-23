@@ -581,10 +581,22 @@ button:active, button:focus {
 }
 .--one .content {
   left: 50%;
-  top: 81%;
+  top: 50%;
   transform: translate(-50%, -50%);
   width: 50rem;
   text-align: center;
+}
+.--one .title {
+  font-size: 3.8rem;
+  line-height: 1.56;
+  font-weight: 400;
+  margin: 0 0 4rem;
+  text-transform: uppercase;
+  font-family: "Mabry Pro";
+}
+.--one .desc {
+  max-width: 30rem;
+  margin: 3rem auto;
 }
 .--one .credits {
   font-size: 1rem;
@@ -593,14 +605,7 @@ button:active, button:focus {
   text-transform: uppercase;
   text-align: center;
   opacity: 0.4;
-  margin-top: 14rem;
-}
-.--one .credits a {
-  color: #000;
-  transition: opacity 0.5s ease;
-}
-.--one .credits a:hover {
-  opacity: 1;
+  margin-top: 17rem;
 }
 @keyframes guide-btn {
   0% {
@@ -614,18 +619,17 @@ button:active, button:focus {
   }
 }
 .--one .enter-btn {
-  background-color: transparent;
-  color: #191919;
-  border: 0.1rem solid #A1A09D;
-  padding: 3.5rem 6rem;
-  border-radius: 50%;
-  font-family: "Editorial New";
-  text-transform: uppercase;
-  font-family: 1.8rem;
-  transition: all 0.5s ease;
+  background-color: #AD8665;
+  color: #fff;
 }
-.--one .enter-btn:hover {
-  text-decoration: underline;
+.--one .enter-btn::after {
+  margin-left: 1.2rem;
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-image: url("@/assets/chevron.png");
+  background-size: cover;
 }
 .--one .sound-btn {
   display: inline-block;
@@ -653,12 +657,7 @@ button:active, button:focus {
   bottom: 5rem;
 }
 .--one .accessibility-btn {
-  background-color: #191919;
-  color: #EDE9E3;
-  transition: all 0.5s;
-}
-.--one .accessibility-btn:hover {
-  text-decoration: underline;
+  background-color: #EDE9E3;
 }
 .--one .guide-btn {
   margin-right: 1.8rem;
@@ -668,19 +667,20 @@ button:active, button:focus {
   background-image: url("@/assets/union.svg");
   background-size: cover;
   display: inline-block;
-  margin-right: 0.7rem;
+  margin-right: 0.5rem;
   width: 1.3rem;
   height: 1.3rem;
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: 0.1rem;
-}
-.--one .guide-btn.--active::before, .--one .guide-btn:hover::before {
+  opacity: 0;
   animation-name: guide-btn;
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   transition: opacity ease 0.2s;
+}
+.--one .guide-btn.--active::before, .--one .guide-btn:hover::before {
+  opacity: 1;
 }
 
 .--two .timeline {
@@ -698,7 +698,7 @@ button:active, button:focus {
 .--five .btn-line-wrapper {
   position: absolute;
   top: 30%;
-  left: 31.5%;
+  left: 36%;
 }
 
 main#accessibilite {
@@ -802,9 +802,7 @@ main#loader {
   height: 100vh;
   width: 100%;
   display: flex;
-  background: url("/slide-9.png");
-  background-position: center;
-  background-size: cover;
+  background-color: #EDE9E3;
 }
 main#loader img {
   margin: auto;
