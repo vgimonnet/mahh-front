@@ -1121,7 +1121,7 @@ main#accessibilite header nav a {
 main#accessibilite header nav a:last-child {
   margin: 0 0 0 auto;
   background-color: #AD8665;
-  border-radius: 3rem;
+  border-radius: 4rem;
   padding: 1.2rem 3rem;
   text-decoration: none;
   color: #fff;
