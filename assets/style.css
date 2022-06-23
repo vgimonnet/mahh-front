@@ -152,7 +152,7 @@ body.accessibilite {
   margin-left: 1.2rem;
 }
 .btn__detail {
-  padding: 1.2rem 1.5rem;
+  padding: 2rem 2.18rem;
   background-color: #fff;
   border-radius: 50%;
   border: none;
@@ -161,8 +161,8 @@ body.accessibilite {
   transition: transform 1s ease;
 }
 .btn__detail img {
-  width: 1rem;
-  height: 1rem;
+  width: 2rem;
+  height: 2rem;
 }
 .btn__detail.--first {
   position: absolute;
@@ -200,11 +200,11 @@ body.accessibilite {
   left: 77.3%;
 }
 .btn__detail:hover {
-  transform: rotate(180deg);
+  transform: scale(1.2);
 }
 
 .btn__zoom {
-  padding: 0.6rem 0.9rem;
+  padding: 1.4rem 1.7rem;
   background-color: #fff;
   border-radius: 50%;
   border: none;
@@ -213,8 +213,8 @@ body.accessibilite {
   transition: transform 0.5s ease;
 }
 .btn__zoom svg {
-  width: 1rem;
-  height: 1rem;
+  width: 2rem;
+  height: 2rem;
 }
 .btn__zoom.--first {
   position: absolute;
@@ -224,35 +224,35 @@ body.accessibilite {
 .btn__zoom.--second {
   position: absolute;
   top: 61%;
-  left: 18.65%;
+  left: 18.4%;
 }
 .btn__zoom.--third {
   position: absolute;
   top: 61%;
-  left: 3.65%;
+  left: 3.3%;
 }
 .btn__zoom.--fourth {
   position: absolute;
   top: 61%;
-  left: 87.2%;
+  left: 86.9%;
 }
 .btn__zoom.--fifth {
   position: absolute;
   top: 61%;
-  left: 31.9%;
+  left: 31.6%;
 }
 .btn__zoom.--sixth {
   position: absolute;
   top: 61%;
-  left: 25.7%;
+  left: 25.4%;
 }
 .btn__zoom.--seventh {
   position: absolute;
   top: 61%;
-  left: 77.9%;
+  left: 77.6%;
 }
 .btn__zoom:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 
 .zoom .btn__zoom {
@@ -322,7 +322,7 @@ button:active, button:focus {
   cursor: default;
   transform: rotate(90deg);
   padding: 5rem;
-  max-width: 70%;
+  max-width: 50%;
   max-height: 35%;
 }
 .modal .modal-header {
@@ -440,8 +440,8 @@ button:active, button:focus {
   border-radius: 50%;
 }
 .museum__slide.--four a#decouvrir div svg {
-  width: 14px;
-  height: 11px;
+  width: 15px;
+  height: 12px;
   position: absolute;
   top: 17px;
   left: 18px;
@@ -581,7 +581,7 @@ button:active, button:focus {
 }
 .--one .content {
   left: 50%;
-  top: 81%;
+  top: 75%;
   transform: translate(-50%, -50%);
   width: 50rem;
   text-align: center;
@@ -593,7 +593,7 @@ button:active, button:focus {
   text-transform: uppercase;
   text-align: center;
   opacity: 0.4;
-  margin-top: 14rem;
+  margin-top: 22rem;
 }
 .--one .credits a {
   color: #000;
