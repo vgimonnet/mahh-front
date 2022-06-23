@@ -22,6 +22,11 @@
     padding: 5rem;
     max-width: 50%;
     max-height: 35%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    &.show {
+      opacity: 1;
+    }
   }  
   
   .modal-header {
@@ -55,6 +60,10 @@
     border: none;
     box-shadow: 0 4px 4px 0 $box-shadow2;
     cursor: pointer;
+    transition: .5s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   .modal-content {
@@ -89,9 +98,29 @@
   }
 }
 
+// .modal-enter-active, .modal-leave-active {
+//   transition: opacity .5s ease;
+// }
+
+// .modal-enter-from,
+// .modal-leave-to,
+// .modal-enter-to,
+// .modal-leave_enter {
+//   opacity: 1;
+// }
+
 
 @media (min-width: 576px) {}
 @media (min-width: 768px) {}
 @media (min-width: 992px) {}
 @media (min-width: 1200px) {}
 @media (min-width: 1400px) {}
+
+
+@-webkit-keyframes smoothOpacity {    
+  100% { opcaity: 1 }
+}
+/* Standard syntax */
+@keyframes smoothOpacity {  
+  100% { opcaity: 1 }
+}
