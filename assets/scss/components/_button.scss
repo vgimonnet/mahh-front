@@ -136,8 +136,10 @@
   border: none;
   height: fit-content;
   box-shadow: -1px 2px 2px 0 $box-shadow;
-  transition: transform .5s ease;
-    z-index: 3;
+  transition: transform .5s ease, top 1.5s ease-in-out, left 1.5s ease-in-out;
+  z-index: 3;
+  animation-duration: 2s;
+  animation-timing-function: linear;
   
   svg {
     width: 2rem;
@@ -145,42 +147,49 @@
   }
 
   &.--first {
+    animation-name: moveFirstBtnZoomOut;
     position: absolute;
     top: 61%;
     left: 69.85%;
   }
 
   &.--second {
+    animation-name: moveSecondBtnZoomOut;
     position: absolute;
     top: 61%;
     left: 18.4%;
   }
 
   &.--third {
+    animation-name: moveThirdBtnZoomOut;
     position: absolute;
     top: 61%;
     left: 3.3%;
   }
 
   &.--fourth {
+    animation-name: moveFourthBtnZoomOut;
     position: absolute;
     top: 61%;
     left: 86.9%;
   }
   
   &.--fifth {
+    animation-name: moveFifthBtnZoomOut;
     position: absolute;
     top: 61%;
     left: 31.6%;
   }
   
   &.--sixth {
+    animation-name: moveSixthBtnZoomOut;
     position: absolute;
     top: 61%;
     left: 25.4%;
   }
   
   &.--seventh {
+    animation-name: moveSeventhBtnZoomOut;
     position: absolute;
     top: 61%;
     left: 77.6%;
@@ -233,6 +242,89 @@
   }
 }
 
+.btn__zoom {
+  &.zoom {
+    visibility: hidden;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+      
+    &.--first {
+      animation-name: moveFirstBtnZoomIn;
+    }
+    
+    &.--second {
+      animation-name: moveSecondBtnZoomIn;
+    }
+    
+    &.--third {
+      animation-name: moveThirdBtnZoomIn;
+    }
+    
+    &.--fourth {
+      animation-name: moveFourthBtnZoomIn;
+    }
+    
+    &.--fifth {
+      animation-name: moveFifthBtnZoomIn;
+    }
+    
+    &.--sixth {
+      animation-name: moveSixthBtnZoomIn;
+    }
+    
+    &.--seventh {
+      animation-name: moveSeventhBtnZoomIn;
+    }
+    
+
+    &.active {
+      visibility: visible;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      transform: scale(1.2) !important;
+      
+      &:hover {
+        transform: scale(1) !important;
+      }
+      
+      &.--first {
+        left: 58%;
+        top: 74%;
+      }
+      
+      &.--second {
+        left: 43.4%;
+        top: 75%;
+      }
+      
+      &.--third {
+        left: -16%;
+        top: 83%;
+      }
+      
+      &.--fourth {
+        left: 121.8%;
+        top: 83%;
+      }
+      
+      &.--fifth {
+        left: 9.8%;
+        top: 84%;
+      }
+      
+      &.--sixth {
+        left: 62.2%;
+        top: 83%;
+      }
+      
+      &.--seventh {
+        left: 57%;
+        top: 83%;  
+      }
+    }
+  }
+}
+
 button:active, button:focus {
   border: none;
 }
@@ -240,4 +332,144 @@ button:active, button:focus {
 .__hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+@keyframes moveFirstBtnZoomIn {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { 
+    opacity: 1;
+    left: 58%;
+    top: 74%;
+  }
+}
+
+@keyframes moveFirstBtnZoomOut {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { 
+    opacity: 1;
+    top: 61%;
+    left: 69.85%;
+  }
+}
+
+@keyframes moveSecondBtnZoomIn {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { 
+    opacity: 1;
+    left: 43.4%;
+    top: 75%;
+  }
+}
+
+@keyframes moveSecondBtnZoomOut {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { 
+    opacity: 1;
+    top: 61%;
+    left: 18.4%;
+  }
+}
+
+@keyframes moveThirdBtnZoomIn {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { 
+    opacity: 1;
+    left: -16%;
+    top: 83%;
+  }
+}
+
+@keyframes moveThirdBtnZoomOut {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { 
+    opacity: 1;
+    top: 61%;
+    left: 3.3%;
+  }
+}
+
+@keyframes moveFourthBtnZoomIn {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { 
+    opacity: 1;
+    left: 121.8%;
+    top: 83%;
+  }
+}
+
+@keyframes moveFourthBtnZoomOut {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { 
+    opacity: 1;
+    top: 61%;
+    left: 86.9%;
+  }
+}
+
+@keyframes moveFifthBtnZoomIn {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { 
+    opacity: 1;
+    left: 9.8%;
+    top: 84%;
+  }
+}
+
+@keyframes moveFifthBtnZoomOut {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { 
+    opacity: 1;
+    top: 61%;
+    left: 31.6%;
+  }
+}
+
+@keyframes moveSixthBtnZoomIn {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { 
+    opacity: 1;
+    left: 62.2%;
+    top: 83%;
+  }
+}
+
+@keyframes moveSixthBtnZoomOut {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { 
+    opacity: 1;
+    top: 61%;
+    left: 25.4%;
+  }
+}
+
+@keyframes moveSeventhBtnZoomIn {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { 
+    opacity: 1;
+    left: 57%;
+    top: 83%;
+  }
+}
+
+@keyframes moveSeventhBtnZoomOut {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { 
+    opacity: 1;
+    top: 61%;
+    left: 77.6%;
+  }
 }

@@ -41,7 +41,7 @@
         <button aria-label="Voir plus de détail" @click="showDetail(0)" class="btn__detail --first">
           <img src="@/assets/plus.svg" alt="Afficher plus de détail">
         </button>
-        <button aria-label="Aggrandir l'oeuvre" @click="zoom(0)" class="btn__zoom --first">
+        <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, event0)" class="btn__zoom --first">
           <svg
             width="19"
             height="19"
@@ -93,7 +93,7 @@
         <button aria-label="Voir plus de détail" @click="showDetail(1)" class="btn__detail --second">
           <img src="@/assets/plus.svg" alt="Afficher plus de détail">
         </button>
-        <button aria-label="Aggrandir l'oeuvre" @click="zoom(1)" class="btn__zoom --second">
+        <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, 1)" class="btn__zoom --second">
           <svg
             width="19"
             height="19"
@@ -137,7 +137,7 @@
         <button aria-label="Voir plus de détail" @click="showDetail(2)" class="btn__detail --third">
           <img src="@/assets/plus.svg" alt="Afficher plus de détail">
         </button>
-        <button aria-label="Aggrandir l'oeuvre" @click="zoom(2)" class="btn__zoom --third">
+        <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, 2)" class="btn__zoom --third">
           <svg
             width="19"
             height="19"
@@ -174,7 +174,7 @@
         <button aria-label="Voir plus de détail" @click="showDetail(3)" class="btn__detail --fourth">
           <img src="@/assets/plus.svg" alt="Afficher plus de détail">
         </button>
-        <button aria-label="Aggrandir l'oeuvre" @click="zoom(3)" class="btn__zoom --fourth">
+        <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, 3)" class="btn__zoom --fourth">
           <svg
             width="19"
             height="19"
@@ -214,7 +214,7 @@
         <button aria-label="Voir plus de détail" @click="showDetail(4)" class="btn__detail --fifth">
           <img src="@/assets/plus.svg" alt="Afficher plus de détail">
         </button>
-        <button aria-label="Aggrandir l'oeuvre" @click="zoom(4)" class="btn__zoom --fifth">
+        <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, 4)" class="btn__zoom --fifth">
           <svg
             width="19"
             height="19"
@@ -254,7 +254,7 @@
         <button aria-label="Voir plus de détail" @click="showDetail(5)" class="btn__detail --sixth">
           <img src="@/assets/plus.svg" alt="Afficher plus de détail">
         </button>
-        <button aria-label="Aggrandir l'oeuvre" @click="zoom(5)" class="btn__zoom --sixth">
+        <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, 5)" class="btn__zoom --sixth">
           <svg
             width="19"
             height="19"
@@ -291,7 +291,7 @@
         <button aria-label="Voir plus de détail" @click="showDetail(6)" class="btn__detail --seventh">
           <img src="@/assets/plus.svg" alt="Afficher plus de détail">
         </button>
-        <button aria-label="Aggrandir l'oeuvre" @click="zoom(6)" class="btn__zoom --seventh">
+        <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, 6)" class="btn__zoom --seventh">
           <svg
             width="19"
             height="19"
@@ -361,8 +361,9 @@ export default {
       this.showModal = !this.showModal
       this.toggleBtnDetailVisibility(false)
     },
-    zoom (idAnchor = 0) {
+    zoom (event, idAnchor = 0) {
       this.zoomActif = !this.zoomActif
+      this.updatePositionBtnZoom(event.currentTarget)
       this.showModal = false
       const wrapper = document.querySelector('.outer-wrapper')
       const modal = document.querySelector(`#zoom-modal-${idAnchor}`)
@@ -419,6 +420,21 @@ export default {
           btn.classList.remove('__hidden')
         } else {
           btn.classList.add('__hidden')
+        }
+      })
+    },
+    updatePositionBtnZoom (currentBtn) {
+      document.querySelectorAll('.btn__zoom').forEach((btn) => {
+        if (this.zoomActif) {
+          btn.classList.add('zoom')
+          if (btn === currentBtn) {
+            btn.classList.add('active')
+          }
+        } else {
+          btn.classList.remove('zoom')
+          if (btn === currentBtn) {
+            btn.classList.remove('active')
+          }
         }
       })
     }

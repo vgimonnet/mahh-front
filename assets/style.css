@@ -211,44 +211,53 @@ body.accessibilite {
   border: none;
   height: fit-content;
   box-shadow: -1px 2px 2px 0 rgba(0, 0, 0, 0.12);
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, top 1.5s ease-in-out, left 1.5s ease-in-out;
   z-index: 3;
+  animation-duration: 2s;
+  animation-timing-function: linear;
 }
 .btn__zoom svg {
   width: 2rem;
   height: 2rem;
 }
 .btn__zoom.--first {
+  animation-name: moveFirstBtnZoomOut;
   position: absolute;
   top: 61%;
   left: 69.85%;
 }
 .btn__zoom.--second {
+  animation-name: moveSecondBtnZoomOut;
   position: absolute;
   top: 61%;
   left: 18.4%;
 }
 .btn__zoom.--third {
+  animation-name: moveThirdBtnZoomOut;
   position: absolute;
   top: 61%;
   left: 3.3%;
 }
 .btn__zoom.--fourth {
+  animation-name: moveFourthBtnZoomOut;
   position: absolute;
   top: 61%;
   left: 86.9%;
 }
 .btn__zoom.--fifth {
+  animation-name: moveFifthBtnZoomOut;
   position: absolute;
   top: 61%;
   left: 31.6%;
 }
 .btn__zoom.--sixth {
+  animation-name: moveSixthBtnZoomOut;
   position: absolute;
   top: 61%;
   left: 25.4%;
 }
 .btn__zoom.--seventh {
+  animation-name: moveSeventhBtnZoomOut;
   position: absolute;
   top: 61%;
   left: 77.6%;
@@ -288,6 +297,70 @@ body.accessibilite {
   visibility: hidden !important;
 }
 
+.btn__zoom.zoom {
+  visibility: hidden;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+.btn__zoom.zoom.--first {
+  animation-name: moveFirstBtnZoomIn;
+}
+.btn__zoom.zoom.--second {
+  animation-name: moveSecondBtnZoomIn;
+}
+.btn__zoom.zoom.--third {
+  animation-name: moveThirdBtnZoomIn;
+}
+.btn__zoom.zoom.--fourth {
+  animation-name: moveFourthBtnZoomIn;
+}
+.btn__zoom.zoom.--fifth {
+  animation-name: moveFifthBtnZoomIn;
+}
+.btn__zoom.zoom.--sixth {
+  animation-name: moveSixthBtnZoomIn;
+}
+.btn__zoom.zoom.--seventh {
+  animation-name: moveSeventhBtnZoomIn;
+}
+.btn__zoom.zoom.active {
+  visibility: visible;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  transform: scale(1.2) !important;
+}
+.btn__zoom.zoom.active:hover {
+  transform: scale(1) !important;
+}
+.btn__zoom.zoom.active.--first {
+  left: 58%;
+  top: 74%;
+}
+.btn__zoom.zoom.active.--second {
+  left: 43.4%;
+  top: 75%;
+}
+.btn__zoom.zoom.active.--third {
+  left: -16%;
+  top: 83%;
+}
+.btn__zoom.zoom.active.--fourth {
+  left: 121.8%;
+  top: 83%;
+}
+.btn__zoom.zoom.active.--fifth {
+  left: 9.8%;
+  top: 84%;
+}
+.btn__zoom.zoom.active.--sixth {
+  left: 62.2%;
+  top: 83%;
+}
+.btn__zoom.zoom.active.--seventh {
+  left: 57%;
+  top: 83%;
+}
+
 button:active, button:focus {
   border: none;
 }
@@ -297,6 +370,188 @@ button:active, button:focus {
   pointer-events: none;
 }
 
+@keyframes moveFirstBtnZoomIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 58%;
+    top: 74%;
+  }
+}
+@keyframes moveFirstBtnZoomOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 61%;
+    left: 69.85%;
+  }
+}
+@keyframes moveSecondBtnZoomIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 43.4%;
+    top: 75%;
+  }
+}
+@keyframes moveSecondBtnZoomOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 61%;
+    left: 18.4%;
+  }
+}
+@keyframes moveThirdBtnZoomIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    left: -16%;
+    top: 83%;
+  }
+}
+@keyframes moveThirdBtnZoomOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 61%;
+    left: 3.3%;
+  }
+}
+@keyframes moveFourthBtnZoomIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 121.8%;
+    top: 83%;
+  }
+}
+@keyframes moveFourthBtnZoomOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 61%;
+    left: 86.9%;
+  }
+}
+@keyframes moveFifthBtnZoomIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 9.8%;
+    top: 84%;
+  }
+}
+@keyframes moveFifthBtnZoomOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 61%;
+    left: 31.6%;
+  }
+}
+@keyframes moveSixthBtnZoomIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 62.2%;
+    top: 83%;
+  }
+}
+@keyframes moveSixthBtnZoomOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 61%;
+    left: 25.4%;
+  }
+}
+@keyframes moveSeventhBtnZoomIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 57%;
+    top: 83%;
+  }
+}
+@keyframes moveSeventhBtnZoomOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 61%;
+    left: 77.6%;
+  }
+}
 .intro {
   display: flex;
   justify-content: center;
