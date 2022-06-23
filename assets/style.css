@@ -833,17 +833,6 @@ button:active, button:focus {
 .museum .content {
   position: absolute;
 }
-.museum__logo {
-  position: absolute;
-  display: inline-block;
-  left: 5rem;
-  top: 5rem;
-}
-.museum__logo img {
-  display: block;
-  width: 17rem;
-  height: 8.5rem;
-}
 
 .ml-auto {
   margin-left: auto;
@@ -870,6 +859,94 @@ button:active, button:focus {
     -webkit-transform: rotate(360deg);
   }
 }
+.logo {
+  position: fixed;
+  display: inline-block;
+  left: 5rem;
+  top: 5rem;
+  z-index: 5;
+}
+.logo img {
+  display: block;
+  width: 17rem;
+  height: 8.5rem;
+}
+
+.sound-btn {
+  z-index: 5;
+  position: fixed;
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  background-color: #fff;
+  color: #191919;
+  background-image: url("@/assets/sound.svg");
+  background-size: 3rem 2.7rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  left: 5rem;
+  bottom: 5rem;
+}
+.sound-btn.--active, .sound-btn:hover {
+  background-image: url("@/assets/mute.svg");
+}
+
+.btn-wrapper {
+  position: fixed;
+  z-index: 5;
+  right: 5rem;
+  bottom: 5rem;
+}
+
+.billeterie-btn {
+  font-weight: 600;
+  padding: 2rem 6rem;
+  position: fixed;
+  z-index: 5;
+  right: 5rem;
+  top: 5rem;
+  transition: text-decoration 0.5s ease;
+}
+.billeterie-btn:hover {
+  text-decoration: underline;
+}
+
+.accessibility-btn {
+  background-color: transparent;
+  color: #191919;
+  transition: all 0.5s;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.accessibility-btn:hover {
+  text-decoration: underline;
+}
+
+.guide-btn {
+  margin-right: 1.8rem;
+  background: transparent;
+  border-color: transparent;
+  color: #191919;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "Manrope";
+}
+.guide-btn::before {
+  content: "";
+  background-image: url("@/assets/union.svg");
+  background-size: cover;
+  display: inline-block;
+  margin-right: 0.7rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 0.1rem;
+}
+
 .zoom-modal {
   -webkit-mask-image: url("@/assets/mask.svg");
   mask-image: url("@/assets/mask.svg");

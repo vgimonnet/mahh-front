@@ -195,19 +195,6 @@
   .content {
     position: absolute;
   }
-
-  &__logo {
-    position: absolute;
-    display: inline-block;
-    left: 5rem;
-    top: 5rem;
-    
-    img {
-      display: block;
-      width: 17rem;
-      height: 8.5rem;
-    }
-  }
 }
 
 .ml-auto {
@@ -226,4 +213,96 @@
 @keyframes infinite-rotate {  
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
+}
+
+.logo {
+  position: fixed;
+  display: inline-block;
+  left: 5rem;
+  top: 5rem;
+  z-index: 5;
+  
+  img {
+    display: block;
+    width: 17rem;
+    height: 8.5rem;
+  }
+}
+
+.sound-btn {
+  z-index: 5;
+  position: fixed;
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  background-color: $white;
+  color: $black;
+  background-image: url('@/assets/sound.svg');
+  background-size: 3rem 2.7rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  left: 5rem;
+  bottom: 5rem;
+
+  &.--active, &:hover {
+  background-image: url('@/assets/mute.svg');
+  }
+}
+
+.btn-wrapper {
+  position: fixed;
+  z-index: 5;
+  right: 5rem;
+  bottom: 5rem;
+}
+
+.billeterie-btn {
+  font-weight: 600;
+  padding: 2rem 6rem;
+  position: fixed;
+  z-index: 5;
+  right: 5rem;
+  top: 5rem;
+  transition: text-decoration .5s ease;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.accessibility-btn {
+  background-color: transparent;
+  color: $black;
+  transition: all .5s;
+  font-size: 1.6rem;
+  font-weight: 600;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.guide-btn {
+  margin-right: 1.8rem;
+  background: transparent;
+  border-color: transparent;
+  color: $black;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: 'Manrope';
+
+  &::before {
+    content: '';
+    background-image: url('@/assets/union.svg');
+    background-size: cover;
+    display: inline-block;
+    margin-right: 0.7rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: .1rem;
+    // opacity: 0;
+  }
 }
