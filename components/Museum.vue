@@ -353,11 +353,13 @@ export default {
   methods: {
     closeModal () {
       this.showModal = false
+      this.toggleBtnDetailVisibility(true)
     },
     showDetail (index) {
       this.indexOeuvre = index
       this.oeuvre = this.oeuvres[index]
       this.showModal = !this.showModal
+      this.toggleBtnDetailVisibility(false)
     },
     zoom (idAnchor = 0) {
       this.zoomActif = !this.zoomActif
@@ -409,6 +411,15 @@ export default {
     scrollToStart () {
       document.querySelector('#two').scrollIntoView({
         behavior: 'smooth'
+      })
+    },
+    toggleBtnDetailVisibility (show) {
+      document.querySelectorAll('.btn__detail').forEach((btn) => {
+        if (show) {
+          btn.classList.remove('__hidden')
+        } else {
+          btn.classList.add('__hidden')
+        }
       })
     }
   }
