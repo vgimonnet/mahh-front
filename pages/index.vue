@@ -1,6 +1,6 @@
 <template>
   <main id="loader">
-    <img src="@/assets/logo.gif" alt="Logo MAHH">
+    <img loading="lazy" src="@/assets/logo.gif" alt="Logo MAHH">
   </main>
 </template>
 

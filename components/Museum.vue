@@ -27,16 +27,16 @@
           <img loading="lazy" class="museum__pic" src="@/assets/slide-2.png" alt="">
         </div>
         <div id="three" class="museum__slide --three">
-          <img class="museum__pic" src="@/assets/slide-3.png" alt="">
+          <img loading="lazy" class="museum__pic" src="@/assets/slide-3.png" alt="">
 
           <span id="anchor-0"></span>
 
           <div id="zoom-modal-0" class="zoom-modal --first">
-            <img src="@/assets/zoom-0.png" alt="">
+            <img loading="lazy" src="@/assets/zoom-0.png" alt="">
           </div>
 
           <button aria-label="Voir plus de détail" @click="showDetail(0)" class="btn__detail --first">
-            <img src="@/assets/plus.svg" alt="Afficher plus de détail">
+            <img loading="lazy" src="@/assets/plus.svg" alt="Afficher plus de détail">
           </button>
           <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, event0)" class="btn__zoom --first">
             <svg
@@ -90,11 +90,11 @@
           <span id="anchor-3"></span>
 
           <div id="zoom-modal-1" class="zoom-modal --second">
-            <img src="@/assets/zoom-1.png" alt="">
+            <img loading="lazy" src="@/assets/zoom-1.png" alt="">
           </div>
 
           <button aria-label="Voir plus de détail" @click="showDetail(1)" class="btn__detail --second">
-            <img src="@/assets/plus.svg" alt="Afficher plus de détail">
+            <img loading="lazy" src="@/assets/plus.svg" alt="Afficher plus de détail">
           </button>
           <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, 1)" class="btn__zoom --second">
             <svg
@@ -137,11 +137,11 @@
           <span id="anchor-5"></span>
 
           <div id="zoom-modal-2" class="zoom-modal --third">
-            <img src="@/assets/zoom-2.png" alt="">
+            <img loading="lazy" src="@/assets/zoom-2.png" alt="">
           </div>
 
           <button aria-label="Voir plus de détail" @click="showDetail(2)" class="btn__detail --third">
-            <img src="@/assets/plus.svg" alt="Afficher plus de détail">
+            <img loading="lazy" src="@/assets/plus.svg" alt="Afficher plus de détail">
           </button>
           <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, 2)" class="btn__zoom --third">
             <svg
@@ -174,11 +174,11 @@
           </button>
 
           <div id="zoom-modal-3" class="zoom-modal --fourth">
-            <img src="@/assets/zoom-3.png" alt="">
+            <img loading="lazy" src="@/assets/zoom-3.png" alt="">
           </div>
 
           <button aria-label="Voir plus de détail" @click="showDetail(3)" class="btn__detail --fourth">
-            <img src="@/assets/plus.svg" alt="Afficher plus de détail">
+            <img loading="lazy" src="@/assets/plus.svg" alt="Afficher plus de détail">
           </button>
           <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, 3)" class="btn__zoom --fourth">
             <svg
@@ -216,11 +216,11 @@
           <span id="anchor-6"></span>
 
           <div id="zoom-modal-4" class="zoom-modal --fifth">
-            <img src="@/assets/zoom-4.png" alt="">
+            <img loading="lazy" src="@/assets/zoom-4.png" alt="">
           </div>
 
           <button aria-label="Voir plus de détail" @click="showDetail(4)" class="btn__detail --fifth">
-            <img src="@/assets/plus.svg" alt="Afficher plus de détail">
+            <img loading="lazy" src="@/assets/plus.svg" alt="Afficher plus de détail">
           </button>
           <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, 4)" class="btn__zoom --fifth">
             <svg
@@ -259,11 +259,11 @@
           <span id="anchor-8"></span>
 
           <div id="zoom-modal-5" class="zoom-modal --sixth">
-            <img src="@/assets/zoom-5.png" alt="">
+            <img loading="lazy" src="@/assets/zoom-5.png" alt="">
           </div>
 
           <button aria-label="Voir plus de détail" @click="showDetail(5)" class="btn__detail --sixth">
-            <img src="@/assets/plus.svg" alt="Afficher plus de détail">
+            <img loading="lazy" src="@/assets/plus.svg" alt="Afficher plus de détail">
           </button>
           <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, 5)" class="btn__zoom --sixth">
             <svg
@@ -296,11 +296,11 @@
           </button>
 
           <div id="zoom-modal-6" class="zoom-modal --seventh">
-            <img src="@/assets/zoom-6.png" alt="">
+            <img loading="lazy" src="@/assets/zoom-6.png" alt="">
           </div>
 
           <button aria-label="Voir plus de détail" @click="showDetail(6)" class="btn__detail --seventh">
-            <img src="@/assets/plus.svg" alt="Afficher plus de détail">
+            <img loading="lazy" src="@/assets/plus.svg" alt="Afficher plus de détail">
           </button>
           <button aria-label="Aggrandir l'oeuvre" @click="zoom($event, 6)" class="btn__zoom --seventh">
             <svg
