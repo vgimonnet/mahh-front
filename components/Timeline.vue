@@ -1,5 +1,5 @@
 <template>
-  <ul class="timeline">
+  <ul class="timeline __hidden">
     <li id="timeline-anchor-0">
       <button @click="scroll('#zoom-modal-0', 0)">Pléistocène</button>
     </li>

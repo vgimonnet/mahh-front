@@ -395,6 +395,7 @@ export default {
       }
     },
     scrollToEnd () {
+      document.querySelector('.timeline').classList.remove('__hidden')
       document.querySelector('#two').scrollIntoView()
       setTimeout(() => {
         document.querySelector('#timeline-anchor-0').classList.add('--active')
@@ -443,6 +444,7 @@ export default {
       }, 75000)
     },
     scrollToStart () {
+      document.querySelector('.timeline').classList.remove('__hidden')
       document.querySelector('#two').scrollIntoView({
         behavior: 'smooth'
       })
