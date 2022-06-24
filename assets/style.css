@@ -616,7 +616,7 @@ button:active, button:focus {
   font-size: 2.4rem;
   line-height: 166%;
   font-family: "Editorial New";
-  margin-bottom: 0;
+  margin-bottom: 5rem;
 }
 .modal .btn__close {
   padding: 1rem 1.2rem;
