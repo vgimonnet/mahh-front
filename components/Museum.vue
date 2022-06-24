@@ -6,8 +6,8 @@
     </a>
     <Player />
     <div class="btn-wrapper">
-      <button @click="scrollToEnd" class="guide-btn btn">Visite guidée</button>
-      <NuxtLink class="accessibility-btn btn" to="/accessibilite">Accessibilité</NuxtLink>
+      <button @click="scrollToEnd" class="guide-btn btn --btn-anim"><span><span data-hover="Visite guidée">Visite guidée</span></span></button>
+      <NuxtLink class="accessibility-btn btn --btn-anim" to="/accessibilite"><span><span data-hover="Accessibilité">Accessibilité</span></span></NuxtLink>
     </div>
     <a href="#" class="billeterie-btn btn">
       Billeterie
@@ -19,7 +19,7 @@
           <div class="content">
             <!-- <h1 class="title">le voyage<br/>au-delà des normes</h1> -->
             <!-- <p class="desc">Bienvenue dans l’exposition interactive sur le handicap. Là où le handicap est une force.</p> -->
-            <a class="enter-btn" @click="scrollToStart">Découvrir</a>
+            <a class="enter-btn --btn-anim" @click="scrollToStart"><span><span data-hover="Découvrir">Découvrir</span></span></a>
             <p class="credits">Créé par<br/><a href="https://www.observatoirehandicapmonde.com/" aria-label="Allez sur le site observatoire des politiques du handicap">observatoire des politiques du handicap</a></p>
           </div>
         </div>

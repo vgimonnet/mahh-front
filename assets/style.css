@@ -106,7 +106,7 @@ button {
   border: 0;
   border-radius: 6rem;
   color: #EDE9E3;
-  padding: 1.9rem 4.2rem;
+  padding: 1rem 0;
   font-size: 1.4rem;
   line-height: 1.56;
   text-transform: uppercase;
@@ -556,6 +556,31 @@ button:active, button:focus {
     left: 77.6%;
   }
 }
+.--btn-anim {
+  overflow: hidden;
+  display: inline-block;
+}
+.--btn-anim > span {
+  overflow: hidden;
+  height: 1.2em;
+  display: inline-block;
+}
+.--btn-anim > span > span {
+  position: relative;
+  display: inline-block;
+  transition: all ease-in-out 0.3s;
+}
+.--btn-anim > span > span::before {
+  color: #191919;
+  position: absolute;
+  top: 100%;
+  content: attr(data-hover);
+  transform: translate3d(0, 0, 0);
+}
+.--btn-anim:hover > span > span {
+  transform: translateY(-100%);
+}
+
 .intro {
   display: flex;
   justify-content: center;
@@ -897,6 +922,7 @@ button:active, button:focus {
 .btn-wrapper {
   position: fixed;
   z-index: 5;
+  display: flex;
   right: 1rem;
   bottom: 2rem;
 }
@@ -908,10 +934,10 @@ button:active, button:focus {
   z-index: 5;
   right: 5rem;
   top: 5rem;
-  transition: text-decoration 0.5s ease;
+  transition: all 0.5s ease;
 }
 .billeterie-btn:hover {
-  text-decoration: underline;
+  background-color: #EDE9E3;
 }
 
 .accessibility-btn {
@@ -926,6 +952,7 @@ button:active, button:focus {
 }
 
 .guide-btn {
+  margin-right: 1.5rem;
   background: transparent;
   border-color: transparent;
   color: #191919;
@@ -1096,85 +1123,7 @@ button:active, button:focus {
   cursor: pointer;
 }
 .--one .enter-btn:hover {
-  text-decoration: underline;
-}
-.--one .billeterie-btn {
-  font-weight: 600;
-  padding: 2rem 6rem;
-  position: absolute;
-  right: 0;
-  top: 5rem;
-  transition: text-decoration 0.5s ease;
-}
-.--one .billeterie-btn:hover {
-  text-decoration: underline;
-}
-.--one .sound-btn {
-  display: inline-block;
-  width: 6rem;
-  height: 6rem;
-  background-color: #fff;
-  color: #191919;
-  background-image: url("@/assets/mute.svg");
-  background-size: 3rem 2.7rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  border: 0;
-  cursor: pointer;
-  position: absolute;
-  left: 5rem;
-  bottom: 5rem;
-  transition: background-image 0.5s ease;
-}
-.--one .sound-btn.--active, .--one .sound-btn:hover {
-  background-image: url("@/assets/sound-on.svg");
-}
-.--one .btn-wrapper {
-  position: absolute;
-  right: 0;
-  bottom: 4rem;
-}
-.--one .accessibility-btn {
-  background-color: transparent;
-  color: #191919;
-  transition: all 0.5s;
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-.--one .accessibility-btn:hover {
-  text-decoration: underline;
-}
-.--one .guide-btn {
-  margin-right: 1.8rem;
-  background: transparent;
-  border-color: transparent;
-  color: #191919;
-  font-size: 1.6rem;
-  font-weight: 600;
-  font-family: "Manrope";
-}
-.--one .guide-btn::before {
-  content: "";
-  background-image: url("@/assets/union.svg");
-  background-size: cover;
-  display: inline-block;
-  margin-right: 0.7rem;
-  width: 1.3rem;
-  height: 1.3rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-top: 0.1rem;
-}
-.--one .guide-btn.--active, .--one .guide-btn:hover {
-  text-decoration: underline;
-}
-.--one .guide-btn.--active::before, .--one .guide-btn:hover::before {
-  animation-name: guide-btn;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  transition: opacity ease 0.2s;
+  border-color: #191919;
 }
 
 .--two .timeline {
@@ -1205,11 +1154,11 @@ button:active, button:focus {
   border-top-right-radius: 3rem;
   display: flex;
   justify-content: center;
-  padding: 3rem 5rem;
+  padding: 1.5rem 5rem;
   z-index: 5;
   list-style: none;
   margin: 0;
-  width: 40%;
+  width: 80rem;
   transition: opacity 0.5s ease;
 }
 .timeline button {
