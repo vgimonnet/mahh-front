@@ -46,7 +46,7 @@ const positions = {
   0: 'left: 32%',
   1: 'left: 49%',
   2: 'left: 59%',
-  3: 'left: 62%',
+  3: 'left: 61%',
   4: 'left: 74%',
   5: 'left: 76.7%',
   6: 'left: 90%'

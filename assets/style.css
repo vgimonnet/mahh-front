@@ -947,6 +947,60 @@ button:active, button:focus {
   margin-top: 0.1rem;
 }
 
+#anchor-0 {
+  position: absolute;
+  top: 0;
+  left: 22%;
+}
+
+#anchor-1 {
+  position: absolute;
+  top: 0;
+  left: -27%;
+}
+
+#anchor-2 {
+  position: absolute;
+  top: 0;
+  left: -30%;
+}
+
+#anchor-3 {
+  position: absolute;
+  top: 0;
+  left: 0%;
+}
+
+#anchor-4 {
+  position: absolute;
+  top: 0;
+  left: -40%;
+}
+
+#anchor-5 {
+  position: absolute;
+  top: 0;
+  left: 0%;
+}
+
+#anchor-6 {
+  position: absolute;
+  top: 0;
+  left: -10%;
+}
+
+#anchor-7 {
+  position: absolute;
+  top: 0;
+  left: -50%;
+}
+
+#anchor-8 {
+  position: absolute;
+  top: 0;
+  left: 30%;
+}
+
 .zoom-modal {
   -webkit-mask-image: url("@/assets/mask.svg");
   mask-image: url("@/assets/mask.svg");
@@ -998,7 +1052,7 @@ button:active, button:focus {
 
 .--one .content {
   left: 50%;
-  top: 75%;
+  top: 73%;
   transform: translate(-50%, -50%);
   width: 50rem;
   text-align: center;
@@ -1010,7 +1064,7 @@ button:active, button:focus {
   text-transform: uppercase;
   text-align: center;
   opacity: 0.4;
-  margin-top: 22rem;
+  margin-top: 20rem;
 }
 .--one .credits a {
   color: #000;
