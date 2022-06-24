@@ -879,7 +879,7 @@ button:active, button:focus {
   height: 6rem;
   background-color: #fff;
   color: #191919;
-  background-image: url("@/assets/sound.svg");
+  background-image: url("@/assets/sound-on.svg");
   background-size: 3rem 2.7rem;
   background-position: center;
   background-repeat: no-repeat;
@@ -1126,7 +1126,7 @@ button:active, button:focus {
   bottom: 5rem;
 }
 .--one .sound-btn.--active, .--one .sound-btn:hover {
-  background-image: url("@/assets/sound.svg");
+  background-image: url("@/assets/sound-on.svg");
 }
 .--one .btn-wrapper {
   position: absolute;
@@ -1208,6 +1208,7 @@ button:active, button:focus {
   list-style: none;
   margin: 0;
   width: 40%;
+  transition: opacity 0.5s ease;
 }
 .timeline button {
   font-family: "Editorial New";
