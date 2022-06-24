@@ -337,7 +337,7 @@ button {
   transform: scale(1) !important;
 }
 .btn__zoom.zoom.active.--first {
-  left: 58%;
+  left: 58.5%;
   top: 74%;
 }
 .btn__zoom.zoom.active.--second {
