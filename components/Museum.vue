@@ -29,6 +29,8 @@
         <div id="three" class="museum__slide --three">
           <img class="museum__pic" src="@/assets/slide-3.png" alt="">
 
+          <span id="anchor-0"></span>
+
           <div id="zoom-modal-0" class="zoom-modal --first">
             <img src="@/assets/zoom-0.png" alt="">
           </div>
@@ -68,6 +70,9 @@
         </div>
         <div id="four" class="museum__slide --four">
           <img loading="lazy" class="museum__pic" src="@/assets/slide-4.png" alt="">
+
+          <span id="anchor-1"></span>
+
           <a href="#" id="decouvrir">
             <div>
               <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,6 +85,9 @@
         </div>
         <div id="five" class="museum__slide --five">
           <img loading="lazy" class="museum__pic" src="@/assets/slide-5.png" alt="">
+
+          <span id="anchor-2"></span>
+          <span id="anchor-3"></span>
 
           <div id="zoom-modal-1" class="zoom-modal --second">
             <img src="@/assets/zoom-1.png" alt="">
@@ -124,6 +132,9 @@
         </div>
         <div id="six" class="museum__slide --six">
           <img loading="lazy" class="museum__pic" src="@/assets/slide-6.png" alt="">
+
+          <span id="anchor-4"></span>
+          <span id="anchor-5"></span>
 
           <div id="zoom-modal-2" class="zoom-modal --third">
             <img src="@/assets/zoom-2.png" alt="">
@@ -202,6 +213,8 @@
         <div id="seven" class="museum__slide --seven">
           <img loading="lazy" class="museum__pic" src="@/assets/slide-7.png" alt="">
 
+          <span id="anchor-6"></span>
+
           <div id="zoom-modal-4" class="zoom-modal --fifth">
             <img src="@/assets/zoom-4.png" alt="">
           </div>
@@ -241,6 +254,9 @@
         </div>
         <div id="height" class="museum__slide --height">
           <img loading="lazy" class="museum__pic" src="@/assets/slide-8.png" alt="">
+
+          <span id="anchor-7"></span>
+          <span id="anchor-8"></span>
 
           <div id="zoom-modal-5" class="zoom-modal --sixth">
             <img src="@/assets/zoom-5.png" alt="">
@@ -379,36 +395,49 @@ export default {
       document.querySelector('#two').scrollIntoView()
       setTimeout(() => {
         document.querySelector('#timeline-anchor-0').classList.add('--active')
-        document.querySelector('#zoom-modal-0').scrollIntoView()
-      }, 3000)
+        document.querySelector('#anchor-0').scrollIntoView()
+        this.showDetail(0)
+      }, 5000)
       setTimeout(() => {
-        document.querySelector('#four').scrollIntoView()
-      }, 10000)
-      setTimeout(() => {
-        document.querySelector('#timeline-anchor-1').classList.add('--active')
-        document.querySelector('#zoom-modal-1').scrollIntoView()
+        this.closeModal()
+        document.querySelector('#anchor-1').scrollIntoView()
       }, 15000)
       setTimeout(() => {
-        document.querySelector('#zoom-modal-2').scrollIntoView()
-        document.querySelector('#timeline-anchor-2').classList.add('--active')
+        document.querySelector('#timeline-anchor-1').classList.add('--active')
+        document.querySelector('#anchor-2').scrollIntoView()
+        this.showDetail(1)
       }, 20000)
       setTimeout(() => {
-        document.querySelector('#zoom-modal-3').scrollIntoView()
-        document.querySelector('#timeline-anchor-3').classList.add('--active')
-      }, 25000)
-      setTimeout(() => {
-        document.querySelector('#zoom-modal-4').scrollIntoView()
+        this.closeModal()
+        document.querySelector('#anchor-3').scrollIntoView()
+        document.querySelector('#timeline-anchor-2').classList.add('--active')
       }, 30000)
       setTimeout(() => {
-        document.querySelector('#timeline-anchor-4').classList.add('--active')
-        document.querySelector('#zoom-modal-5').scrollIntoView()
+        document.querySelector('#anchor-4').scrollIntoView()
+        document.querySelector('#timeline-anchor-3').classList.add('--active')
+        this.showDetail(2)
       }, 35000)
       setTimeout(() => {
-        document.querySelector('#zoom-modal-6').scrollIntoView()
-      }, 40000)
-      setTimeout(() => {
-        document.querySelector('#zoom-modal-7').scrollIntoView()
+        this.closeModal()
+        document.querySelector('#anchor-5').scrollIntoView()
+        this.showDetail(3)
       }, 45000)
+      setTimeout(() => {
+        this.closeModal()
+        document.querySelector('#anchor-6').scrollIntoView()
+        this.showDetail(4)
+      }, 55000)
+      setTimeout(() => {
+        this.closeModal()
+        document.querySelector('#anchor-7').scrollIntoView()
+        document.querySelector('#timeline-anchor-4').classList.add('--active')
+        this.showDetail(5)
+      }, 65000)
+      setTimeout(() => {
+        this.closeModal()
+        document.querySelector('#anchor-8').scrollIntoView()
+        this.showDetail(6)
+      }, 75000)
     },
     scrollToStart () {
       document.querySelector('#two').scrollIntoView({
