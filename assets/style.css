@@ -888,6 +888,7 @@ button:active, button:focus {
   cursor: pointer;
   left: 5rem;
   bottom: 3rem;
+  transition: background-image 0.5s ease;
 }
 .sound-btn.--active, .sound-btn:hover {
   background-image: url("@/assets/mute.svg");
@@ -1124,6 +1125,7 @@ button:active, button:focus {
   position: absolute;
   left: 5rem;
   bottom: 5rem;
+  transition: background-image 0.5s ease;
 }
 .--one .sound-btn.--active, .--one .sound-btn:hover {
   background-image: url("@/assets/sound-on.svg");

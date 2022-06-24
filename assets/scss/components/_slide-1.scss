@@ -91,6 +91,8 @@
     left: 5rem;
     bottom: 5rem;
 
+    transition: background-image .5s ease;
+
     &.--active, &:hover {
     background-image: url('@/assets/sound-on.svg');
     }

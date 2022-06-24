@@ -247,6 +247,8 @@
   left: 5rem;
   bottom: 3rem;
 
+  transition: background-image .5s ease;
+
   &.--active, &:hover {
   background-image: url('@/assets/mute.svg');
   }
