@@ -998,7 +998,7 @@ button:active, button:focus {
 
 .--one .content {
   left: 50%;
-  top: 75%;
+  top: 73%;
   transform: translate(-50%, -50%);
   width: 50rem;
   text-align: center;
@@ -1010,7 +1010,7 @@ button:active, button:focus {
   text-transform: uppercase;
   text-align: center;
   opacity: 0.4;
-  margin-top: 22rem;
+  margin-top: 20rem;
 }
 .--one .credits a {
   color: #000;
