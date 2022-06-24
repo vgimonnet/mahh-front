@@ -9,7 +9,7 @@ button {
   border: 0;
   border-radius: 6rem;
   color: $light;
-  padding: 1.9rem 4.2rem;
+  padding: 1rem 0;
   font-size: 1.4rem;
   line-height: 1.56;
   text-transform: uppercase;
@@ -475,5 +475,35 @@ button:active, button:focus {
     opacity: 1;
     top: 61%;
     left: 77.6%;
+  }
+}
+
+.--btn-anim {
+	overflow: hidden;
+  display: inline-block;
+
+  & > span {
+    overflow: hidden;
+		height: 1.2em;
+    display: inline-block;
+
+    & > span {
+      position: relative;
+			display: inline-block;
+      transition: all ease-in-out 0.3s;
+			&::before {
+				color: $black;
+				position: absolute;
+				top: 100%;
+				content: attr(data-hover);
+        transform: translate3d(0,0,0);
+			}
+    }
+  }
+
+  &:hover{
+    & > span > span {
+      transform: translateY(-100%);
+    }
   }
 }

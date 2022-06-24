@@ -257,6 +257,7 @@
   z-index: 5;
   right: 5rem;
   bottom: 5rem;
+  display: flex;
 }
 
 .billeterie-btn {
@@ -266,9 +267,9 @@
   z-index: 5;
   right: 5rem;
   top: 5rem;
-  transition: text-decoration .5s ease;
+  transition: all .5s ease;
   &:hover {
-    text-decoration: underline;
+    background-color: $light;
   }
 }
 
@@ -284,7 +285,7 @@
 }
 
 .guide-btn {
-  margin-right: 1.8rem;
+  margin-right: 1.5rem;
   background: transparent;
   border-color: transparent;
   color: $black;
