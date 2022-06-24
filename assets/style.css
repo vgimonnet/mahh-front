@@ -337,7 +337,7 @@ button {
   transform: scale(1) !important;
 }
 .btn__zoom.zoom.active.--first {
-  left: 58%;
+  left: 58.5%;
   top: 74%;
 }
 .btn__zoom.zoom.active.--second {
@@ -640,9 +640,8 @@ button:active, button:focus {
 .modal .modal-header h3 {
   font-size: 2.4rem;
   line-height: 166%;
-  text-transform: uppercase;
   font-family: "Editorial New";
-  margin-bottom: 0;
+  margin-bottom: 5rem;
 }
 .modal .btn__close {
   padding: 1rem 1.2rem;
@@ -905,7 +904,7 @@ button:active, button:focus {
   height: 6rem;
   background-color: #fff;
   color: #191919;
-  background-image: url("@/assets/sound.svg");
+  background-image: url("@/assets/sound-on.svg");
   background-size: 3rem 2.7rem;
   background-position: center;
   background-repeat: no-repeat;
@@ -913,7 +912,8 @@ button:active, button:focus {
   border: 0;
   cursor: pointer;
   left: 5rem;
-  bottom: 5rem;
+  bottom: 3rem;
+  transition: background-image 0.5s ease;
 }
 .sound-btn.--active, .sound-btn:hover {
   background-image: url("@/assets/mute.svg");
@@ -922,9 +922,9 @@ button:active, button:focus {
 .btn-wrapper {
   position: fixed;
   z-index: 5;
-  right: 5rem;
-  bottom: 5rem;
   display: flex;
+  right: 1rem;
+  bottom: 2rem;
 }
 
 .billeterie-btn {
@@ -1159,6 +1159,7 @@ button:active, button:focus {
   list-style: none;
   margin: 0;
   width: 80rem;
+  transition: opacity 0.5s ease;
 }
 .timeline button {
   font-family: "Editorial New";

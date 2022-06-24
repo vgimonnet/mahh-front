@@ -379,6 +379,7 @@ export default {
       this.showModal = false
       const wrapper = document.querySelector('.outer-wrapper')
       const modal = document.querySelector(`#zoom-modal-${idAnchor}`)
+      const timeline = document.querySelector('.timeline')
       if (this.zoomActif) {
         modal.scrollIntoView()
         wrapper.style.overflow = 'hidden'
@@ -386,12 +387,15 @@ export default {
         setTimeout(() => {
           modal.scrollIntoView()
         }, 1000)
+        timeline.classList.add('__hidden')
       } else {
         wrapper.style.overflow = null
         modal.classList.remove('--active')
+        timeline.classList.remove('__hidden')
       }
     },
     scrollToEnd () {
+      document.querySelector('.timeline').classList.remove('__hidden')
       document.querySelector('#two').scrollIntoView()
       setTimeout(() => {
         document.querySelector('#timeline-anchor-0').classList.add('--active')
@@ -440,6 +444,7 @@ export default {
       }, 75000)
     },
     scrollToStart () {
+      document.querySelector('.timeline').classList.remove('__hidden')
       document.querySelector('#two').scrollIntoView({
         behavior: 'smooth'
       })

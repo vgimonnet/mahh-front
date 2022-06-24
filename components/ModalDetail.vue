@@ -10,14 +10,19 @@
         </button>
 
         <div class="modal-header">
-          <h2>
+          <h2 v-if="[0, 1].includes(index)" style="min-width: 22rem;">
             {{ data.date }}
           </h2>
-          <h3 v-html="data.title"></h3>
+          <h2 v-else>
+            {{ data.date }}
+          </h2>
+          <div>
+            <h3 v-html="data.title"></h3>
+            <p v-html="data.content"></p>
+          </div>
         </div>
 
         <section class="modal-content">
-          <p v-html="data.content"></p>
         </section>
 
         <div class="modal-footer">
