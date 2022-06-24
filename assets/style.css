@@ -562,7 +562,7 @@ button:active, button:focus {
 }
 .--btn-anim > span {
   overflow: hidden;
-  height: 1.2em;
+  height: 1.25em;
   display: inline-block;
 }
 .--btn-anim > span > span {
