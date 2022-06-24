@@ -378,24 +378,29 @@ export default {
     scrollToEnd () {
       document.querySelector('#two').scrollIntoView()
       setTimeout(() => {
+        document.querySelector('#timeline-anchor-0').classList.add('--active')
         document.querySelector('#zoom-modal-0').scrollIntoView()
       }, 3000)
       setTimeout(() => {
         document.querySelector('#four').scrollIntoView()
       }, 10000)
       setTimeout(() => {
+        document.querySelector('#timeline-anchor-1').classList.add('--active')
         document.querySelector('#zoom-modal-1').scrollIntoView()
       }, 15000)
       setTimeout(() => {
         document.querySelector('#zoom-modal-2').scrollIntoView()
+        document.querySelector('#timeline-anchor-2').classList.add('--active')
       }, 20000)
       setTimeout(() => {
         document.querySelector('#zoom-modal-3').scrollIntoView()
+        document.querySelector('#timeline-anchor-3').classList.add('--active')
       }, 25000)
       setTimeout(() => {
         document.querySelector('#zoom-modal-4').scrollIntoView()
       }, 30000)
       setTimeout(() => {
+        document.querySelector('#timeline-anchor-4').classList.add('--active')
         document.querySelector('#zoom-modal-5').scrollIntoView()
       }, 35000)
       setTimeout(() => {
