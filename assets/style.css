@@ -887,7 +887,7 @@ button:active, button:focus {
   border: 0;
   cursor: pointer;
   left: 5rem;
-  bottom: 5rem;
+  bottom: 3rem;
 }
 .sound-btn.--active, .sound-btn:hover {
   background-image: url("@/assets/mute.svg");
@@ -896,8 +896,8 @@ button:active, button:focus {
 .btn-wrapper {
   position: fixed;
   z-index: 5;
-  right: 5rem;
-  bottom: 5rem;
+  right: 1rem;
+  bottom: 2rem;
 }
 
 .billeterie-btn {
@@ -925,7 +925,6 @@ button:active, button:focus {
 }
 
 .guide-btn {
-  margin-right: 1.8rem;
   background: transparent;
   border-color: transparent;
   color: #191919;
